@@ -1,0 +1,36 @@
+{
+    "staff": [
+        {
+            "staff_id": 1,
+            "staff_color": "#ffffff"
+        },
+        {
+            "staff_id": 2,
+            "staff_color": "#ffffff"
+        }
+    ],
+    "partners": [
+        {
+            "name": "partner_1",
+            "logo": "partner_1.png",
+            "link": "vtc_link_1"
+        },
+        {
+            "name": "partner_2",
+            "logo": "partner_2.png",
+            "link": "vtc_link_2"
+        }
+    ],
+    "hall_of_fame": [
+        {
+            "rol_id": "0",
+            "featured": false,
+            "rol_name": "name"
+        },
+        {
+            "rol_id": "1",
+            "featured": false,
+            "rol_name": "name"
+        }
+    ]
+}
