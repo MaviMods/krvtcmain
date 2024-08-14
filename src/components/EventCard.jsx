@@ -49,7 +49,7 @@ const EventCard = ({
             <img
                 className="object-cover rounded-xl drop-shadow-lg"
                 src={img}
-                alt="Los Andes VTC logo"
+                alt="Kerala Roadrunners VTC logo"
             />
             <div className="flex flex-col pb-2">
                 <Link
