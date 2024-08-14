@@ -28,20 +28,13 @@ const JoinCard = () => {
                             color={themeTatailwind.primary.color}
                             variant="h4"
                         >
-                            <b>¡Bienvenidos a Los Andes VTC!</b>
+                            <b>Welcome to Kerala Roadrunners VTC!</b>
                         </Typography>
                         <Typography
                             color={themeTatailwind.primary.color}
                             variant="subtitle1"
                         >
-                            ¡Únete a Los Andes VTC y descubre la pasión por el
-                            transporte en Euro Truck Simulator! Somos una
-                            comunidad de conductores latinoamericanos
-                            comprometidos con la excelencia. Participamos en
-                            convoys mundiales y privados, construyendo una
-                            empresa reconocida por su profesionalismo y carisma
-                            en el juego. ¡Embárcate en emocionantes rutas y
-                            forma parte de nuestra historia en Los Andes VTC!
+                            Join Kerala Roadrunners VTC and discover the passion for transport in Euro Truck Simulator! We are one community of kerala drivers committed to excellence. We participate in global and private convoys, building a company recognized for its professionalism and charisma in the game. Embark on exciting routes and It is part of our history at Kerala Roadrunners VTC!
                         </Typography>
                         <div className="grid content-end h-full">
                             <div className="flex justify-center">
@@ -50,7 +43,7 @@ const JoinCard = () => {
                                     variant="contained"
                                     onClick={() => navigate("/news/29574")}
                                 >
-                                    Postularse
+                                    Apply
                                 </Button>
                             </div>
                         </div>
