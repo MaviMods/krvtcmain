@@ -96,7 +96,7 @@ const Staff = () => {
 
     const renderStaff = () => {
         let staff = filterStaff();
-        if (staff.length === 0) return <EmptyData msj={"No hay Staff"} />;
+        if (staff.length === 0) return <EmptyData msj={"There is no staff"} />;
 
         return (
             <div className="flex flex-col gap-5 p-6">
@@ -154,13 +154,13 @@ const Staff = () => {
                 </>
             );
         } else {
-            return <EmptyData msj={"No hay Staff"} />;
+            return <EmptyData msj={"There is no staff"} />;
         }
     };
 
     const checkError = () => {
         if (error) {
-            return <ErrorData msj={"Error al cargar el Staff"} />;
+            return <ErrorData msj={"Error loading Staff"} />;
         } else if (!loading) {
             return renderPage();
         }
@@ -170,7 +170,7 @@ const Staff = () => {
         <>
             <div className="flex justify-center m-2">
                 <Typography color={themeTatailwind.primary.color} variant="h4">
-                    <b>Nuestro Staff</b>
+                    <b>Our Staff</b>
                 </Typography>
             </div>
             <ModalLoading open={loading} />
