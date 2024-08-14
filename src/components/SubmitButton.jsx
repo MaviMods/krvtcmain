@@ -33,19 +33,19 @@ const SubmitButton = ({
     return (
         <div className="mt-3">
             <AlertModal
-                title="Completa toda la informacion"
-                description="Falta informacion que completes en el formulario"
+                title="Complete all the information"
+                description="There is missing information that you complete in the form"
                 handleClose={() => setOpenEmpyData(false)}
                 open={openEmpyData}
             />
             <AlertModal
-                title="No pudimos enviar el formulario"
-                description="Verifica tu conexion a internet o intenta mas tarde"
+                title="We could not send the form"
+                description="Check your internet connection or try again later"
                 handleClose={() => setError(false)}
                 open={error}
             />
             <SnakeBarInfo
-                msj="Enviado con exito"
+                msj="Sent successfully"
                 severity="success"
                 open={succes}
                 setOpen={setSucces}
@@ -58,7 +58,7 @@ const SubmitButton = ({
                 size="large"
                 onClick={dataEmpyToSend}
             >
-                Enviar
+                Send
             </LoadingButton>
         </div>
     );
