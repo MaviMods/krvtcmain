@@ -52,7 +52,7 @@ const MovileHeaderOptions = ({
                     <ListItemIcon>
                         <BusinessRoundedIcon />
                     </ListItemIcon>
-                    <ListItemText primary="Empresa" />
+                    <ListItemText primary="Company" />
                     {open ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
                 {drawerOptions.map((option, index) => (
