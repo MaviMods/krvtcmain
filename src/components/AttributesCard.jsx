@@ -13,33 +13,33 @@ const AttributesCard = () => {
     const { themeTatailwind } = useDarkMode();
     const Atributes = [
         {
-            atribute: "Andes Community",
+            atribute: "Kerala Roadrunners VTC",
             description:
-                "Una comunidad de camioneros virtuales apasionados que crea una experiencia realista y entretenida para sus miembros.",
+                "A community of passionate virtual truckers that creates a realistic and entertaining experience for its members.",
             icon: <PeopleRoundedIcon fontSize="large" />,
         },
         {
-            atribute: "Andes Staff & drivers",
+            atribute: "KRVTC Staff & drivers",
             description:
-                "Un equipo interno dedicado a brindar el mejor soporte y asistencia a los conductores para una experiencia gratificante en Los Andes.",
+                "An internal team dedicated to providing the best support and assistance to drivers for a rewarding experience in Kerala Roadrunners.",
             icon: <AdminPanelSettingsRoundedIcon fontSize="large" />,
         },
         {
             atribute: "International convoys",
             description:
-                "Emocionantes convoys internacionales que permiten unirse a la comunidad global de camioneros virtuales y demostrar habilidades en la carretera.",
+                "Exciting international convoys that allow you to join the global community of virtual truckers and demonstrate skills on the road.",
             icon: <FlagRoundedIcon fontSize="large" />,
         },
         {
             atribute: "Competition & events",
             description:
-                "Competencias y eventos que agregan emoción y diversión a la comunidad, promoviendo habilidades de conducción y alcanzando nuevas metas.",
+                "Competitions and events that add excitement and fun to the community, promoting driving skills and reaching new goals.",
             icon: <EmojiEventsRoundedIcon fontSize="large" />,
         },
         {
             atribute: "Partners program",
             description:
-                "Programa de asociación estratégica y colaboración con otras empresas afines, ofreciendo beneficios mutuos y fortaleciendo la comunidad.",
+                "Strategic partnership and collaboration program with other like-minded companies, offering mutual benefits and strengthening the community.",
             icon: <HandshakeRoundedIcon fontSize="large" />,
         },
     ];
