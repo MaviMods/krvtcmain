@@ -13,7 +13,7 @@ const ErrorData = ({ msj }) => {
                 }  rounded-xl gap-2 m-10 p-3`}
             >
                 <Typography variant="h4" color={themeTatailwind.primary.color}>
-                    <b>No encontramos resultados</b>
+                    <b>We did not find results</b>
                 </Typography>
                 <Divider sx={{ mr: 1 }} variant="middle" flexItem />
                 <Typography variant="h6" color={themeTatailwind.primary.color}>
@@ -25,8 +25,7 @@ const ErrorData = ({ msj }) => {
                     variant="caption"
                     color={themeTatailwind.primary.color}
                 >
-                    Lamentablemente, no se han encontrado resultados para tu
-                    consulta.
+                    Unfortunately, no results were found for your consultation.
                 </Typography>
             </div>
         </div>
