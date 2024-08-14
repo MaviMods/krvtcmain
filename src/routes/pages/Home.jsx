@@ -6,7 +6,7 @@ import Statistics from "../../components/Statistics";
 import AttributesCard from "../../components/AttributesCard";
 
 const Home = () => {
-    document.title = TITLE + " | Inicio";
+    document.title = TITLE + " | Home";
     return (
         <div>
             <Slider />
