@@ -10,7 +10,7 @@ import ModalLoading from "../../components/ModalLoading";
 import { TITLE, REST_API_URL } from "../../helpers/configs";
 
 const Employees = () => {
-    document.title = TITLE + " | Miembros";
+    document.title = TITLE + " | Employees";
     const [Response, setResponse] = useState(false);
     const loaded = useRef(false);
     const totalItems = useRef(0);
@@ -88,7 +88,7 @@ const Employees = () => {
 
     const checkError = () => {
         if (error) {
-            return <ErrorData msj={"Error al cargar los miembros"} />;
+            return <ErrorData msj={"Error loading members"} />;
         } else if (!loading) {
             return renderPage();
         }
@@ -98,7 +98,7 @@ const Employees = () => {
         <div className="flex flex-col">
             <div className="flex justify-center m-2">
                 <Typography color={themeTatailwind.primary.color} variant="h4">
-                    <b>Nuestros Empleados</b>
+                    <b>Our Employees</b>
                 </Typography>
             </div>
             <ModalLoading open={loading} />
