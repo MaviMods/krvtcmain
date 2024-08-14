@@ -12,7 +12,7 @@ import SubmitButton from "../../components/SubmitButton";
 import ReCaptchaCom from "../../components/ReCaptchaCom";
 
 const Contact = () => {
-    document.title = TITLE + " | Contacto";
+    document.title = TITLE + " | Contact";
     const { themeTatailwind } = useDarkMode();
     const baseData = {
         name: "",
@@ -36,28 +36,28 @@ const Contact = () => {
 
     const selectReason = [
         {
-            value: "Reporte de conductor",
-            label: "Reporte de usuario",
+            value: "Driver report",
+            label: "User report",
         },
         {
-            value: "Contacto administrativo",
-            label: "Contacto administrativo",
+            value: "Administrative contact",
+            label: "Administrative contact",
         },
         {
-            value: "Sugerencia",
-            label: "Sugerencia",
+            value: "Suggestion",
+            label: "Suggestion",
         },
         {
-            value: "Opiniones",
-            label: "Opiniones",
+            value: "Opinions",
+            label: "Opinions",
         },
         {
-            value: "Contacto con el desarrollador",
-            label: "Contacto con el desarrollador",
+            value: "Contact the developer",
+            label: "Contact the developer",
         },
         {
-            value: "Otros",
-            label: "Otros",
+            value: "Others",
+            label: "Others",
         },
     ];
 
@@ -157,7 +157,7 @@ const Contact = () => {
                     color={themeTatailwind.primary.color}
                     variant="h4"
                 >
-                    <b>Contacto</b>
+                    <b>Contact</b>
                 </Typography>
                 <div className="flex justify-center">
                     <Typography
@@ -166,13 +166,7 @@ const Contact = () => {
                         className="max-w-xl text-justify p-3"
                         color={themeTatailwind.primary.color}
                     >
-                        ¡Gracias por contactarnos! Completa el formulario y te
-                        responderemos por correo electrónico lo antes posible.
-                        Proporciona detalles para una mejor atención. Podría
-                        haber demoras en la respuesta debido a la cantidad de
-                        consultas, pero nos esforzaremos por ser rápidos.
-                        ¡Esperamos resolver tus inquietudes y brindarte una
-                        excelente experiencia!
+                        Thank you for contacting us! Complete the form and We will respond by email as soon as possible. Provide details for better care. Could There may be delays in response due to the number of queries, but we will strive to be quick. We hope to resolve your concerns and provide you with a excellent experience!
                     </Typography>
                 </div>
                 <form className="flex flex-col gap-7 p-3 md:pl-14 md:pr-14">
@@ -183,7 +177,7 @@ const Contact = () => {
                             inputProps={{ maxLength: 150 }}
                             error={data.dataError.name}
                             id="name"
-                            label="Nombre"
+                            label="Name"
                             variant="outlined"
                             value={data.dataValues.name}
                             onChange={handleChangeText}
@@ -219,7 +213,7 @@ const Contact = () => {
                                 inputProps={{ maxLength: 200 }}
                                 error={data.dataError.reason}
                                 id="reason"
-                                label="Razon"
+                                label="Reason"
                                 select
                                 variant="outlined"
                                 value={data.dataValues.reason}
@@ -245,7 +239,7 @@ const Contact = () => {
                             inputProps={{ maxLength: 3800 }}
                             error={data.dataError.message}
                             id="message"
-                            label="Mensaje"
+                            label="Message"
                             fullWidth
                             multiline
                             rows={5}
