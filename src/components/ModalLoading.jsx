@@ -10,14 +10,14 @@ const ModalLoading = ({ open }) => {
 
     return (
         <Dialog open={open} keepMounted aria-describedby="loading-info">
-            <DialogTitle>Cargando...</DialogTitle>
+            <DialogTitle>Charging...</DialogTitle>
             <DialogContent>
                 <div className="flex space-x-2 items-center">
                     <CircularProgress
                         color={darkMode ? "inherit" : "primary"}
                     />
                     <DialogContentText id="loading-info-text">
-                        Esto puede tomar unos segundos
+                        This may take a few seconds
                     </DialogContentText>
                 </div>
             </DialogContent>
