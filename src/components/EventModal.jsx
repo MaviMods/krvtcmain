@@ -32,7 +32,7 @@ const EventModal = ({ title, description, image, handleClose, open }) => {
                             href={image}
                             target="_blank"
                         >
-                            Expandir mapa
+                            Expand map
                         </Button>
                     </div>
                     <ReactMarkdown
@@ -44,7 +44,7 @@ const EventModal = ({ title, description, image, handleClose, open }) => {
                 </DialogContent>
                 <DialogActions>
                     <Button color="error" onClick={handleClose}>
-                        Cerrar
+                        Close
                     </Button>
                 </DialogActions>
             </Dialog>
