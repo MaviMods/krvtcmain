@@ -117,7 +117,7 @@ const NewView = () => {
                             startIcon={<ArrowBackRoundedIcon />}
                             onClick={() => navigate("/news")}
                         >
-                            Regresar
+                            Go back
                         </Button>
                     </div>
                     <Typography
@@ -139,7 +139,7 @@ const NewView = () => {
 
     const checkError = () => {
         if (error) {
-            return <ErrorData msj={"Error al cargar la noticia"} />;
+            return <ErrorData msj={"Error loading the news"} />;
         } else if (!loading) {
             return <div className="viewNew">{renderPage()}</div>;
         }
