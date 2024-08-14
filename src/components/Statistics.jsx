@@ -62,7 +62,7 @@ const Statistics = () => {
                                 variant="h6"
                                 color={themeTatailwind.primary.color}
                             >
-                                Ultimo recluta en la VTC
+                                Last recruit in the VTC
                             </Typography>
                         </div>
                         <Divider className="w-full" component="div" />
@@ -79,7 +79,7 @@ const Statistics = () => {
                                 className="text-center"
                                 component="div"
                             >
-                                No se encontró al nuevo recluta 😢
+                                The new recruit was not found 😢
                             </Typography>
                         )}
                     </div>
@@ -94,7 +94,7 @@ const Statistics = () => {
                                 variant="h6"
                                 color={themeTatailwind.primary.color}
                             >
-                                N° de Conductores
+                                No. of Drivers
                             </Typography>
                         </div>
                         <Divider className="w-full" component="div" />
@@ -116,7 +116,7 @@ const Statistics = () => {
                                 variant="h6"
                                 color={themeTatailwind.primary.color}
                             >
-                                Miembros en Discord
+                                Members on Discord
                             </Typography>
                         </div>
                         <Divider className="w-full" component="div" />
@@ -138,7 +138,7 @@ const Statistics = () => {
                                 variant="h6"
                                 color={themeTatailwind.primary.color}
                             >
-                                Staff Activo
+                                Active Staff
                             </Typography>
                         </div>
                         <Divider className="w-full" component="div" />
@@ -179,7 +179,7 @@ const Statistics = () => {
                         className="text-center"
                         component="div"
                     >
-                        No se encontraron estadisticas 😢
+                        No statistics found 😢
                     </Typography>
                 )}
             </div>
