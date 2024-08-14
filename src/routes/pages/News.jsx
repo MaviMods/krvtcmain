@@ -105,7 +105,7 @@ const News = () => {
                                 color={themeTatailwind.primary.color}
                                 variant="h6"
                             >
-                                <b>Destacados</b>
+                                <b>Featured</b>
                             </Typography>
                             <div className="grid md:grid-cols-3">
                                 {pinnedNews.map((event) => {
@@ -156,7 +156,7 @@ const News = () => {
                     color={themeTatailwind.primary.color}
                     variant="h6"
                 >
-                    <b>Lo ultimo</b>
+                    <b>The last</b>
                 </Typography>
                 <div className="grid md:grid-cols-3">{renderNews()}</div>
                 {EmptyDataStatus.current && !error && !loading ? (
@@ -184,7 +184,7 @@ const News = () => {
 
     const checkError = () => {
         if (error) {
-            return <ErrorData msj={"Error al cargar las noticias"} />;
+            return <ErrorData msj={"Error loading news"} />;
         } else if (!loading) {
             return renderPage();
         }
@@ -194,13 +194,13 @@ const News = () => {
         <>
             <div className="flex justify-center m-2">
                 <Typography color={themeTatailwind.primary.color} variant="h4">
-                    <b>Noticias</b>
+                    <b>News</b>
                 </Typography>
             </div>
             <ModalLoading open={loading} />
             {checkError()}
             {EmptyDataStatus.current && !error && !loading ? (
-                <EmptyData msj={"No hay noticias"} />
+                <EmptyData msj={"There is no news"} />
             ) : (
                 <></>
             )}
