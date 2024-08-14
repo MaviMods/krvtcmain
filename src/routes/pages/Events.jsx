@@ -12,7 +12,7 @@ import ModalLoading from "../../components/ModalLoading";
 import { TITLE, REST_API_URL } from "../../helpers/configs";
 
 const Events = () => {
-    document.title = TITLE + " | Eventos";
+    document.title = TITLE + " | Events";
     const loaded = useRef(false);
     const EventsResponse = useRef(false);
     const EmptyDataStatus = useRef(false);
@@ -128,7 +128,7 @@ const Events = () => {
                             className="flex justify-center p-1"
                             variant="h6"
                         >
-                            <b>Proximo evento</b>
+                            <b>Next event</b>
                         </Typography>
                         <EventCard
                             key={event.id}
@@ -178,7 +178,7 @@ const Events = () => {
 
     const checkError = () => {
         if (error) {
-            return <ErrorData msj={"Error al cargar los eventos"} />;
+            return <ErrorData msj={"Error loading events"} />;
         } else if (!loading) {
             return renderPage();
         }
@@ -188,14 +188,14 @@ const Events = () => {
         <>
             <div className="flex justify-center m-2">
                 <Typography color={themeTatailwind.primary.color} variant="h4">
-                    <b>Eventos oficiales</b>
+                    <b>Official events</b>
                 </Typography>
             </div>
 
             <ModalLoading open={loading} />
             {checkError()}
             {EmptyDataStatus.current && !error && !loading ? (
-                <EmptyData msj={"No hay eventos próximos"} />
+                <EmptyData msj={"There are no upcoming events"} />
             ) : (
                 <></>
             )}
