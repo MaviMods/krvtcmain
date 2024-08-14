@@ -92,7 +92,7 @@ const EventCard = ({
                     className="flex justify-center pb-2 pt-2"
                     variant="h6"
                 >
-                    Asistencia
+                    Attendance
                 </Typography>
                 <Divider />
                 <Typography
@@ -119,14 +119,14 @@ const EventCard = ({
                     href={url}
                     target="_blank"
                 >
-                    ¡Voy a estar allí!
+                    I'll be there!
                 </Button>
                 <Button
                     variant="contained"
                     endIcon={<MapRoundedIcon />}
                     onClick={() => setOpenEmpyData(true)}
                 >
-                    Ver detalles
+                    See details
                 </Button>
             </div>
         </div>
