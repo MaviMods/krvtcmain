@@ -44,7 +44,7 @@ const PartnersCard = () => {
                         variant="h4"
                     >
                         <HandshakeRoundedIcon fontSize="large" />
-                        <b>Partners oficiales</b>
+                        <b>Official partners</b>
                     </Typography>
                     <Divider className="w-full" component="div" />
                     <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 justify-items-center gap-4">
@@ -55,7 +55,7 @@ const PartnersCard = () => {
                         variant="contained"
                         onClick={() => navigate("/news/31248")}
                     >
-                        ¡Hazte Partner!
+                        Become a Partner!
                     </Button>
                 </div>
             </div>
