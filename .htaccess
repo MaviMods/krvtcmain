@@ -1,1 +1,1 @@
-AddType application/javascript .js
+AddType text/jsx .jsx
