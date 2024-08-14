@@ -10,7 +10,7 @@ import MemberCard from "../../components/MemberCard";
 import ModalLoading from "../../components/ModalLoading";
 
 const HallOfFame = () => {
-    document.title = TITLE + " | Salón de la fama";
+    document.title = TITLE + " | Hall Of Fame";
     const { themeTatailwind } = useDarkMode();
     const [Response, setResponse] = useState([]);
     const loaded = useRef(false);
@@ -163,7 +163,7 @@ const HallOfFame = () => {
 
     const checkError = () => {
         if (error) {
-            return <ErrorData msj={"Error al cargar"} />;
+            return <ErrorData msj={"Error loading"} />;
         } else if (!loading && succes) {
             return renderPage();
         }
@@ -173,11 +173,11 @@ const HallOfFame = () => {
         <>
             <div className="flex justify-center m-2">
                 <Typography color={themeTatailwind.primary.color} variant="h4">
-                    <b>Salon de la fama</b>
+                    <b>Hall of Fame</b>
                 </Typography>
             </div>
             {succes && !loading && Response.length === 0 && (
-                <EmptyData key={"contenHallEmpty"} msj="Sin resultados" />
+                <EmptyData key={"contenHallEmpty"} msj="No results" />
             )}
             <ModalLoading open={loading} />
             {checkError()}
