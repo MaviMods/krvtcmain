@@ -40,17 +40,17 @@ const Header = () => {
     const HeaderOptions = [
         {
             icon: HomeRoundedIcon,
-            text: "Inicio",
+            text: "Start",
             url: "/",
         },
         {
             icon: EventAvailableRoundedIcon,
-            text: "Eventos",
+            text: "Events",
             url: "/events",
         },
         {
             icon: NewspaperRoundedIcon,
-            text: "Noticias",
+            text: "News",
             url: "/news",
         },
         {
@@ -60,12 +60,12 @@ const Header = () => {
         },
         {
             icon: HowToRegRoundedIcon,
-            text: "Postularse",
+            text: "Apply",
             url: "/news/29574",
         },
         {
             icon: AlternateEmailRoundedIcon,
-            text: "Contacto",
+            text: "Contact",
             url: "/contact",
         },
     ];
@@ -73,17 +73,17 @@ const Header = () => {
     const BusineOptions = [
         {
             icon: InfoRoundedIcon,
-            text: "Sobre nosotros",
+            text: "About us",
             url: "/news/29575",
         },
         {
             icon: AssignmentIndRoundedIcon,
-            text: "Empleados",
+            text: "Employees",
             url: "/employees",
         },
         {
             icon: FavoriteRoundedIcon,
-            text: "Salon de la fama",
+            text: "Hall of Fame",
             url: "/hall-of-fame",
         },
         {
@@ -164,7 +164,7 @@ const Header = () => {
                     <img
                         className="drop-shadow-2xl w-32"
                         src={logo}
-                        alt="Los Andes VTC logo"
+                        alt="Kerala Roadrunners VTC logo"
                     />
                 </div>
                 <MovileHeaderOptions
@@ -219,7 +219,7 @@ const Header = () => {
                             startIcon={<BusinessRoundedIcon />}
                             endIcon={<KeyboardArrowDownRoundedIcon />}
                         >
-                            Empresa
+                            Company
                         </Button>
                         <Menu
                             id="basic-menu"
