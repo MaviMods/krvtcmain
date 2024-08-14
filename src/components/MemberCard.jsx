@@ -50,7 +50,7 @@ const MemberCard = ({ id, username, roleName, dateJoin, imgLink }) => {
                     color={themeTatailwind.secundary.color}
                     variant="caption"
                 >
-                    En la empresa desde el {formatOnlyDate(dateJoin)}
+                    In the company since {formatOnlyDate(dateJoin)}
                 </Typography>
                 <div className="grid content-end h-full">
                     <Button
@@ -59,7 +59,7 @@ const MemberCard = ({ id, username, roleName, dateJoin, imgLink }) => {
                         href={`https://truckersmp.com/user/${id}`}
                         target="_blank"
                     >
-                        Ver perfil
+                        View profile
                     </Button>
                 </div>
             </>
