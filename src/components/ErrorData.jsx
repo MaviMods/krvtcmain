@@ -13,7 +13,7 @@ const ErrorData = ({ msj }) => {
                 }  rounded-xl gap-2 m-10 p-3`}
             >
                 <Typography variant="h4" color={themeTatailwind.primary.color}>
-                    <b>Tenemos un problema</b>
+                    <b>we have a problem</b>
                 </Typography>
                 <Divider sx={{ mr: 1 }} variant="middle" flexItem />
                 <Typography variant="h6" color={themeTatailwind.primary.color}>
@@ -25,9 +25,7 @@ const ErrorData = ({ msj }) => {
                     variant="caption"
                     color={themeTatailwind.primary.color}
                 >
-                    Lo siento, pero parece que ha ocurrido un error. Por favor,
-                    verifica tu conexión a Internet y vuelve a intentarlo más
-                    tarde.
+                    I'm sorry, but it seems an error has occurred. Please, check your internet connection and try again again late.
                 </Typography>
             </div>
         </div>
