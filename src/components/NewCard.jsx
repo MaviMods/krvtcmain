@@ -37,11 +37,11 @@ const NewCard = ({
                 className={`flex flex-col ${themeTatailwind.secundary.main} w-full rounded-lg border-2 border-transparent ${themeTatailwind.primary.border_color} shadow-2xl m-4 mb-12 p-4`}
             >
                 {/*
-                en planificacion para poner una imagen de fondo
+                in planning to put a background image
                 <img
                     className="object-cover rounded-lg drop-shadow-lg"
                     src="https://static.truckersmp.com/images/event/cover/14653.1678403142.jpeg"
-                    alt="Los Andes VTC logo"
+                    alt="Kerala Roadrunners VTC logo"
                 />
             */}
                 <div className="flex flex-col h-full pb-2">
@@ -70,7 +70,7 @@ const NewCard = ({
                                 endIcon={<AddRoundedIcon />}
                                 onClick={() => navigate(`/news/${id}`)}
                             >
-                                Leer mas
+                                Read more
                             </Button>
                         </div>
                         <div className="flex h-full w-full pt-3">
