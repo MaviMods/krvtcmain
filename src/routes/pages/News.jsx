@@ -12,7 +12,7 @@ import ModalLoading from "../../components/ModalLoading";
 import { TITLE, REST_API_URL } from "../../helpers/configs";
 
 const News = () => {
-    document.title = TITLE + " | Noticias";
+    document.title = TITLE + " | News";
     const loaded = useRef(false);
     const EmptyDataStatus = useRef(false);
     const totalItems = useRef(0);
