@@ -67,7 +67,7 @@ const Footer = () => {
                     </Typography>
                 </div>
                 <div className="flex justify-center p-2">
-                    <Typography>Company verified by&nbsp;</Typography>
+                    <Typography>Company validated by&nbsp;</Typography>
                     <Typography color="error">
                         <b>Truckers MP</b>
                     </Typography>
