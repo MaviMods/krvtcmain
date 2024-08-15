@@ -9,6 +9,18 @@
             "staff_color": "#ffffff"
         }
     ],
+    "partners": [
+        {
+            "name": "Not Available",
+            "logo": "KErala_roadrunners_2-1.png",
+            "link": "vtc_link_1"
+        },
+        {
+            "name": "Not Available",
+            "logo": "KErala_roadrunners_2-1.png",
+            "link": "vtc_link_2"
+        }
+    ],
     "hall_of_fame": [
         {
             "rol_id": "0",
