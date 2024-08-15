@@ -41,7 +41,7 @@ const JoinCard = () => {
                                 <Button
                                     startIcon={<HowToRegRoundedIcon />}
                                     variant="contained"
-                                    onClick={() => navigate("/news/29574")}
+                                    onClick={() => navigate("/news/41309")}
                                 >
                                     Apply
                                 </Button>
