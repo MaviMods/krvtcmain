@@ -15,33 +15,27 @@ const AttributesCard = () => {
         {
             atribute: "Kerala Roadrunners VTC",
             description:
-                "A community of passionate virtual truckers that creates a realistic and entertaining experience for its members.",
+                "Welcome to Kerala RoadRunners, a virtual trucking company based in Kerala, India. We are a VTC established on 09th August 2023 dedicated to providing our drivers with the best possible experience. We are a team of friendly and experienced truckers who love the open road and the challenge of delivering cargo on time and in good condition.",
             icon: <PeopleRoundedIcon fontSize="large" />,
         },
         {
-            atribute: "KRVTC Staff & drivers",
+            atribute: "We Offer's",
             description:
-                "An internal team dedicated to providing the best support and assistance to drivers for a rewarding experience in Kerala Roadrunners.",
+                "A friendly and supportive community Regular convoy and Giveaways Access to the our trucks and trailers A comprehensive training program We are always looking for new drivers to join our team. If you are passionate about trucking and want to be part of a great community, then Kerala RoadRunners is the place for you.",
             icon: <AdminPanelSettingsRoundedIcon fontSize="large" />,
         },
         {
-            atribute: "International convoys",
+            atribute: "Our Mission",
             description:
-                "Exciting international convoys that allow you to join the global community of virtual truckers and demonstrate skills on the road.",
+                "Our mission is to provide our drivers with the best possible trucking experience. We want our drivers to enjoy the open road, the challenge of delivering cargo, and the camaraderie of being part of a team.",
             icon: <FlagRoundedIcon fontSize="large" />,
         },
         {
-            atribute: "Competition & events",
+            atribute: "Our Values",
             description:
-                "Competitions and events that add excitement and fun to the community, promoting driving skills and reaching new goals.",
+                "We believe in the following values:  Teamwork: We are a team of drivers who work together to achieve our goals. We support each other and help each other out. Communication: We communicate openly and honestly with each other. We are always willing to listen to feedback and suggestions. Respect: We respect each other as drivers and as individuals. We treat each other with kindness and compassion. Excellence: We strive to be the best trucking company we can be. We are always looking for ways to improve our VTC.",
             icon: <EmojiEventsRoundedIcon fontSize="large" />,
-        },
-        {
-            atribute: "Partners program",
-            description:
-                "Strategic partnership and collaboration program with other like-minded companies, offering mutual benefits and strengthening the community.",
-            icon: <HandshakeRoundedIcon fontSize="large" />,
-        },
+        }
     ];
 
     const AttributeCard = (id, atribute, description, icon) => {
