@@ -39,7 +39,7 @@ const EventCard = ({
             className={`flex flex-col ${themeTatailwind.secundary.main} rounded-lg border-2 border-transparent ${themeTatailwind.primary.border_color} shadow-2xl m-4 mb-12 p-4`}
         >
             <EventModal
-                title="Detalles del evento"
+                title="Event details"
                 description={description}
                 image={rute_img}
                 handleClose={() => setOpenEmpyData(false)}
