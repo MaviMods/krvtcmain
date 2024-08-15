@@ -1,4 +1,4 @@
-#### Client application created in REACT for TruckersMP VTC'
+#### Client application created in REACT for TruckersMP VTC
 
 ##### The backend of the app can be found here [losandes-express-site](https://github.com/CoffeSiberian/losandes-express-site "losandes-express-site")
 
