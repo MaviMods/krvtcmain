@@ -22,7 +22,7 @@ const Footer = () => {
         {
             name: "YouTube",
             logo: <YouTubeIcon />,
-            link: "https://www.youtube.com/channel/UC2aPVnV_I9-k_JlBoTQe2Ig/videos",
+            link: "https://www.youtube.com/@KeralaRoadRunners",
         },
         {
             name: "TruckersMP",
