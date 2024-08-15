@@ -167,7 +167,7 @@ const Statistics = () => {
                     variant="h4"
                 >
                     <QueryStatsRoundedIcon fontSize="large" />
-                    <b>Estadisticas</b>
+                    <b>Statistics</b>
                 </Typography>
                 <Divider />
                 {StatisticsResponse !== undefined ? (
