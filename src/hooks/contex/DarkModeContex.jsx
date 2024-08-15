@@ -26,10 +26,10 @@ const DarkMode = ({ children }) => {
         palette: {
             mode: "light",
             primary: {
-                main: "#3ca9d0",
+                main: "#004bad",
             },
             secundary: {
-                main: "#ed9427",
+                main: "#ffde59",
             },
         },
     };
