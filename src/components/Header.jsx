@@ -61,7 +61,7 @@ const Header = () => {
         {
             icon: HowToRegRoundedIcon,
             text: "Apply",
-            url: "/news/29574",
+            url: "/news/41309",
         },
         {
             icon: AlternateEmailRoundedIcon,
@@ -74,7 +74,7 @@ const Header = () => {
         {
             icon: InfoRoundedIcon,
             text: "About us",
-            url: "/news/29575",
+            url: "/news/41308",
         },
         {
             icon: AssignmentIndRoundedIcon,
