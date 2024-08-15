@@ -4,7 +4,6 @@ import { useDarkMode } from "../../hooks/contex/DarkModeContex";
 import { REST_API_URL } from "../../helpers/configs";
 import { TITLE } from "../../helpers/configs";
 import Slider from "../../components/Slider";
-import PartnersCard from "../../components/PartnersCard";
 import deepClone from "../../helpers/deepClone";
 import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
@@ -264,9 +263,6 @@ const Contact = () => {
                         />
                     </div>
                 </form>
-            </div>
-            <div className="w-full">
-                <PartnersCard />
             </div>
         </div>
     );
