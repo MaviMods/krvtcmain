@@ -34,7 +34,7 @@ const JoinCard = () => {
                             color={themeTatailwind.primary.color}
                             variant="subtitle1"
                         >
-                            Join Kerala Roadrunners VTC and discover the passion for transport in Euro Truck Simulator! We are one community of kerala drivers committed to excellence. We participate in global and private convoys, building a company recognized for its professionalism and charisma in the game. Embark on exciting routes and It is part of our history at Kerala Roadrunners VTC!
+                            If you are interested in joining Kerala RoadRunners, please send a application thorugh our Kerala RoadRunners VTC page!
                         </Typography>
                         <div className="grid content-end h-full">
                             <div className="flex justify-center">
