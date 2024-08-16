@@ -75,9 +75,44 @@
     ],
     "hall_of_fame": [
         {
-            "rol_id": "1099569691862765569",
+            "rol_id": "180519",
             "featured": false,
-            "rol_name": "Staff"
+            "rol_name": "FOUNDER"
+        },
+        {
+            "rol_id": "180520",
+            "featured": false,
+            "rol_name": "CEO/CO FOUNDER"
+        },
+        {
+            "rol_id": "180522",
+            "featured": false,
+            "rol_name": "COO/CO FOUNDER"
+        },
+        {
+            "rol_id": "188094",
+            "featured": false,
+            "rol_name": "CHIEF DEVELOPER"
+        },
+        {
+            "rol_id": "180710",
+            "featured": false,
+            "rol_name": "CHIEF DESIGNER"
+        },
+        {
+            "rol_id": "181180",
+            "featured": false,
+            "rol_name": "HR TEAM"
+        },
+        {
+            "rol_id": "188092",
+            "featured": false,
+            "rol_name": "DESIGN TEAM"
+        },
+        {
+            "rol_id": "188095",
+            "featured": false,
+            "rol_name": "MARKETING TEAM"
         }
     ]
 }
