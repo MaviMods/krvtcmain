@@ -2,11 +2,63 @@
     "staff": [
         {
             "staff_id": 2147363,
-            "staff_color": "#ffffff"
+            "staff_color": "#FF0000"
         },
         {
-            "staff_id": 2,
-            "staff_color": "#ffffff"
+            "staff_id": 4697568,
+            "staff_color": "#781419"
+        },
+        {
+            "staff_id": 4940524,
+            "staff_color": "#470e11"
+        },
+        {
+            "staff_id": 5227469,
+            "staff_color": "#03c0ff"
+        },
+        {
+            "staff_id": 5130058,
+            "staff_color": "#ffb703"
+        },
+        {
+            "staff_id": 5226698,
+            "staff_color": "#ffb703"
+        },
+        {
+            "staff_id": 5027344,
+            "staff_color": "#bc03ff"
+        },
+        {
+            "staff_id": 5231089,
+            "staff_color": "#bc03ff"
+        },
+        {
+            "staff_id": 5240386,
+            "staff_color": "#bc03ff"
+        },
+        {
+            "staff_id": 4999300,
+            "staff_color": "#0374ff"
+        },
+        {
+            "staff_id": 5182147,
+            "staff_color": "#0374ff"
+        },
+        {
+            "staff_id": 5004826,
+            "staff_color": "#0374ff"
+        },
+        {
+            "staff_id": 5337190,
+            "staff_color": "#0374ff"
+        },
+        {
+            "staff_id": 4951170,
+            "staff_color": "#0374ff"
+        },
+        {
+            "staff_id": 5528064,
+            "staff_color": "#0374ff"
         }
     ],
     "partners": [
