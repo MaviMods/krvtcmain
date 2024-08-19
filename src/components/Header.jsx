@@ -17,6 +17,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
 import AssignmentIndRoundedIcon from "@mui/icons-material/AssignmentIndRounded";
 import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
+import SecurityRoundedIcon from '@mui/icons-material/SecurityRounded';
 import HowToRegRoundedIcon from "@mui/icons-material/HowToRegRounded";
 import BusinessRoundedIcon from "@mui/icons-material/BusinessRounded";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
@@ -87,7 +88,7 @@ const Header = () => {
             url: "/staff",
         },
         {
-            icon: InfoRoundedIcon,
+            icon: SecurityRoundedIcon,
             text: "Privacy Policy",
             url: "/policy",
         },
