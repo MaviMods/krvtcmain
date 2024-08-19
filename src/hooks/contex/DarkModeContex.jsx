@@ -52,13 +52,13 @@ const DarkMode = ({ children }) => {
         primary: {
             main: "bg-teal-50",
             color: "black",
-            border_color: "bg-gray-400 hover:bg-gray-400 active:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-100 transition duration-500 hover:scale-100",
+            border_color: "bg-gray-400 hover:bg-gray-400 active:bg-gray-100 focus:outline-none focus:ring focus:ring-violet-100 transition duration-500 hover:scale-100",
         },
         secundary: {
             main: "bg-gray-400",
             main_contrast: "bg-gray-200",
             color: "black",
-            border_color: "hover:border-cyan-600",
+            border_color: "bg-gray-400 hover:bg-gray-400 active:bg-gray-100 focus:outline-none focus:ring focus:ring-violet-100 transition duration-500 hover:scale-100",
         },
     };
 
