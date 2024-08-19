@@ -13,49 +13,44 @@ const TermsCard = () => {
     const { themeTatailwind } = useDarkMode();
     const Atributes = [
         {
-            atribute: "Privacy Policy",
+            atribute: "Terms of Use",
             description:
-                "Greetings from Kerala RoadRunners!(referred to as *us,* *we,* or *our*). We are dedicated to safeguarding your personal information since we value your privacy. This privacy statement explains how we gather, use, disclose, and protect your personal information when you visit our website or make use of our services. You accept the practices outlined in this Privacy Policy by visiting or using our website. Please do not use our website or services if you disagree with the terms stated in this policy. Data That We Gather",
+                "These terms and conditions outline the rules and regulations for the use of Kerala Roadrunners's Website. By accessing this website we assume you accept these terms and conditions in full. Do not continue to use Kerala Roadrunners's website if you do not accept all of the terms and conditions stated on this page. The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and any or all Agreements: *Client*, *You* and *Your* refers to you, the person accessing this website and accepting the Company's terms and conditions. *The Company*, *Ourselves*, *We*, *Our* and *Us*, refers to our Company. *Party*, *Parties*, or  *Us*, refers to both the Client and ourselves, or either the Client or ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner, whether by formal meetings of a fixed duration or any other means, for the express purpose of meeting the Client's needs in respect of the provision of the Company's stated services/products, in accordance with and subject to, prevailing law of . Any use of the above terminology or other words in the singular, plural, capitalisation and/or he/she or they, are taken as interchangeable and therefore as referring to the same."
         },
         {
-            atribute: "What type of Information do we collect?",
+            atribute: "Use of the Website",
             description:
-                "While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you (*Personal Data*). Personally identifiable information may include, but is not limited to: Email address, Cookies and Usage Data, Country & Timezone, Age. We may also ask for: Steam, Discord, TruckersMP, Usage Data. We may also collect information on how the Service is accessed and used (*Usage Data*). This Usage Data may include information such as your computer's browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data. ",
+                "You promise not to abuse the website or take any actions that could impede or interfere with its operation. You are in charge of keeping your account credentials secure. Account Registration: You might need to create an account in order to use any of our VTC services' features. You promise to fill out the registration form completely and accurately and to maintain the accuracy of the information associated with your account. Account Security: You are in charge of keeping your login information secure. All actions taken using your account are also your responsibility. Tell us right away if you think someone else may have accessed your account without authorization."
         },
         {
-            atribute: "Tracking & Cookies Data",
+            atribute: "User Content",
             description:
-                "We use cookies and similar tracking technologies to track the activity on our Service and hold certain information. Cookies are files with small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Tracking technologies also used are beacons, tags, and scripts to collect and track information and to improve and analyze our Service. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service. Examples of Cookies we use: Session Cookies. We use Session Cookies to operate our Service, Preference Cookies. We use Preference Cookies to remember your preferences and various settings, Security Cookies. We use Security Cookies for security purposes.",
+                "Your submissions, posts, and sharing of content on our platform are entirely your responsibility. You provide us with a worldwide, royalty-free, non-exclusive license to use, edit, and display your content in connection with our services when you submit content. Prohibited Behavior: You consent to refrain from partaking in any of the following actions that are forbidden: breaking any rules or laws that may be in force. pretending to be someone or something else. intimidating, harassing, or acting harmfully toward other people. publishing, disseminating, or uploading offensive, illicit, or other people's intellectual property. use our services for profit without obtaining our prior authorization in writing. attempting to access user accounts or our systems without authorization."
         },
         {
-            atribute: "Use of Data",
+            atribute: "Reservation of Rights",
             description:
-                "Kerala Roadrunners uses the collected data for various purposes: To provide and maintain the Service, To notify you about changes to our Service, To allow you to participate in interactive features of our Service when you choose to do so, To provide customer care and support, To provide analysis or valuable information so that we can improve the Service, To monitor the usage of the Service, To detect, prevent and address technical issues.",
+                "We reserve the right at any time and in its sole discretion to request that you remove all links or any particular link to our website. You agree to immediately remove all links to our website upon such request. We also reserve the right to amend these terms and conditions and its linking policy at any time. By continuing to link to our website, you agree to be bound to and abide by these linking terms and conditions."
         },
         {
-            atribute: "Transfer Of Data",
+            atribute: "Change of Terms",
             description:
-                "Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ from those from your jurisdiction. If you are located outside the United Kingdom and choose to provide information to us, please note that we transfer the data, including Personal Data, to the United Kingdom and process it there. Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer. Kerala Roadrunners will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organisation or a country unless there are adequate controls in place including the security of your data and other personal information.",
+                "These Terms of Service are subject to change at any moment. Any modifications will have a new *Last updated* date and be published on this page. By using our services going forward, you agree to the revised conditions."
         },
         {
-            atribute: "Disclosure Of Data",
+            atribute: "License",
             description:
-                "We use cookies and similar tracking technologies to track the activity on our Service and hold certain information. Cookies are files with small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Tracking technologies also used are beacons, tags, and scripts to collect and track information and to improve and analyze our Service. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service. Examples of Cookies we use: Session Cookies. We use Session Cookies to operate our Service. Preference Cookies. We use Preference Cookies to remember your preferences and various settings. Security Cookies. We use Security Cookies for security purposes.",
+                "Unless otherwise stated, Kerala Roadrunners and/or it's licensors own the intellectual property rights for all material on Kerala Roadrunners. All intellectual property rights are reserved. You"
         },
         {
-            atribute: "Your Rights To Your Personal Data",
+            atribute: "Removal of links from our Services",
             description:
-                "GDPR: Under the GDPR Laws we are required to allow the following: Access to all your personal information. (Can be accessed via a data dump) Correction and deletion of data. Restriction of processing and objection. Lodging a complaint with the Information Commissioner's Office. If you wish to do any of the above, please contact us. Contact Email: keralaroadrunners@gmail.com",
+                "If you find any link on our website or any linked website objectionable for any reason, you may contact us about this. We will consider requests to remove links but will have no obligation to do so or to respond directly to you. Whilst we endeavour to ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we commit to ensuring that the website remains available or that the material on the website is kept up to date."
         },
         {
-            atribute: "Security Of Data",
+            atribute: "Contact Us",
             description:
-                "The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security. Service Providers: We may employ third party companies and individuals to facilitate our Service (*Service Providers*), to provide the Service on our behalf, to perform Service-related services or to assist us in analysing how our Service is used. These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose. Analytics: We may use third-party Service Providers to monitor and analyse the use of our Service. Google Analytics: Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our Service. This data is shared with other Google services. Google may use the collected data to contextualise and personalise the ads of its own advertising network.",
-        },
-        {
-            atribute: "Changes To This Privacy Policy",
-            description:
-                "We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. We will let you know via email or a prominent notice on our Service, prior to the change becoming effective and update the *effective date* at the top of this Privacy Policy. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page. © KERALA ROADRUNNERS",
+                "Please email us at: keralaroadrunners@gmail.com with any queries, worries, or requests pertaining to these Terms of Service. © KERALA ROADRUNNERS"
         }
     ];
 
@@ -101,7 +96,7 @@ const TermsCard = () => {
     };
 
     const renderAttributesP2 = () => {
-        const divAtributes = Atributes.slice(3, 9);
+        const divAtributes = Atributes.slice(3, 8);
         return (
             <div className="grid grid-cols-1 sm:grid-cols-2">
                 {divAtributes.map((atribute, index) => {
