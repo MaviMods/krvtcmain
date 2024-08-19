@@ -44,7 +44,7 @@ const DarkMode = ({ children }) => {
             main: "bg-stone-800",
             main_contrast: "bg-stone-600",
             color: "white",
-            border_color: "hover:border-cyan-600",
+            border_color: "bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300",
         },
     };
 
