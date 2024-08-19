@@ -50,7 +50,7 @@ const DarkMode = ({ children }) => {
 
     const lightTailwind = {
         primary: {
-            main: "bg-teal-200",
+            main: "bg-teal-100",
             color: "black",
             border_color: "hover:border-cyan-600",
         },
