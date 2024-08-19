@@ -28,7 +28,7 @@ const JoinCard = () => {
                             color={themeTatailwind.primary.color}
                             variant="h4"
                         >
-                            <b>Welcome to Kerala Roadrunners VTC!</b>
+                            <b>Welcome To Kerala Roadrunners VTC!</b>
                         </Typography>
                         <Typography
                             color={themeTatailwind.primary.color}
