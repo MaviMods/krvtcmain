@@ -75,7 +75,7 @@ const PolicyCard = () => {
         return (
             <div className="grid grid-cols-1 md:grid-cols-3">
                 {divAtributes.map((atribute, index) => {
-                    return AttributeCard(
+                    return PolicyCard(
                         index,
                         atribute.atribute,
                         atribute.description,
