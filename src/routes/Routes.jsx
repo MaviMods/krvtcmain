@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Home from "./pages/Home";
 import Events from "./pages/Events";
 import News from "./pages/News";
+import Policy from "./pages/Policy";
 import NewView from "./pages/NewView";
 import Staff from "./pages/Staff";
 import Contact from "./pages/Contact";
@@ -86,6 +87,15 @@ const RoutePage = () => {
                         <>
                             <Header />
                             <Employees />
+                        </>
+                    }
+                />
+                <Route
+                    path="/policy"
+                    element={
+                        <>
+                            <Header />
+                            <Policy />
                         </>
                     }
                 />
