@@ -7,7 +7,7 @@ import News from "./pages/News";
 import Policy from "./pages/Policy";
 import NewView from "./pages/NewView";
 import Staff from "./pages/Staff";
-import Use from "./pages/Use";
+import TermsOfUse from "./pages/TermsOfUse";
 import Contact from "./pages/Contact";
 import HallOfFame from "./pages/HallOfFame";
 import Employees from "./pages/Employees";
@@ -101,7 +101,7 @@ const RoutePage = () => {
                     }
                 />
                 <Route
-                    path="/use"
+                    path="/terms-of-use"
                     element={
                         <>
                             <Header />
