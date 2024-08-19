@@ -37,13 +37,13 @@ const DarkMode = ({ children }) => {
     const darkTailwind = {
         primary: {
             main: "bg-neutral-900",
-            color: "white",
+            color: "#c8e7f2",
             border_color: "hover:border-cyan-600",
         },
         secundary: {
             main: "bg-stone-800",
             main_contrast: "bg-stone-600",
-            color: "white",
+            color: "#c8e7f2",
             border_color: "hover:border-cyan-600",
         },
     };
