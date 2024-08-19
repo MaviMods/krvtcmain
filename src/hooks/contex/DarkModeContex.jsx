@@ -52,7 +52,7 @@ const DarkMode = ({ children }) => {
         primary: {
             main: "bg-teal-50",
             color: "black",
-            border_color: "hover:border-cyan-600",
+            border_color: "bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300",
         },
         secundary: {
             main: "bg-gray-300",
