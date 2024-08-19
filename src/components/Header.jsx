@@ -72,11 +72,6 @@ const Header = () => {
 
     const BusineOptions = [
         {
-            icon: InfoRoundedIcon,
-            text: "About us",
-            url: "/policy",
-        },
-        {
             icon: AssignmentIndRoundedIcon,
             text: "Employees",
             url: "/employees",
@@ -90,6 +85,16 @@ const Header = () => {
             icon: BadgeRoundedIcon,
             text: "Staff",
             url: "/staff",
+        },
+        {
+            icon: InfoRoundedIcon,
+            text: "Privacy Policy",
+            url: "/policy",
+        },
+        {
+            icon: InfoRoundedIcon,
+            text: "Terms of Use",
+            url: "/terms",
         },
     ];
 
