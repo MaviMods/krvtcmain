@@ -7,6 +7,7 @@ import News from "./pages/News";
 import Policy from "./pages/Policy";
 import NewView from "./pages/NewView";
 import Staff from "./pages/Staff";
+import Terms from "./pages/Terms";
 import Contact from "./pages/Contact";
 import HallOfFame from "./pages/HallOfFame";
 import Employees from "./pages/Employees";
