@@ -38,7 +38,7 @@ const DarkMode = ({ children }) => {
         primary: {
             main: "bg-neutral-900",
             color: "white",
-            border_color: "bg-stone-600 hover:bg-stone-600 active:bg-stone-700 focus:outline-none focus:ring focus:ring-violet-300 transition duration-500 hover:scale-100",
+            border_color: "bg-stone-600 hover:bg-stone-600 active:bg-stone-700 focus:outline-none focus:ring focus:ring-violet-300 transition duration-150 hover:scale-100",
         },
         secundary: {
             main: "bg-stone-800",
@@ -52,7 +52,7 @@ const DarkMode = ({ children }) => {
         primary: {
             main: "bg-teal-50",
             color: "black",
-            border_color: "bg-gray-400 hover:bg-gray-400 active:bg-gray-100 focus:outline-none focus:ring focus:ring-violet-100 transition duration-500 hover:scale-100",
+            border_color: "bg-gray-400 hover:bg-gray-400 active:bg-gray-100 focus:outline-none focus:ring focus:ring-violet-100 transition duration-150 hover:scale-100",
         },
         secundary: {
             main: "bg-gray-400",
