@@ -94,7 +94,7 @@ const Header = () => {
         {
             icon: InfoRoundedIcon,
             text: "Terms of Use",
-            url: "/terms",
+            url: "/terms-of-use",
         },
     ];
 
