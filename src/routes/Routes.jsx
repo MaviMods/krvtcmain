@@ -99,6 +99,15 @@ const RoutePage = () => {
                         </>
                     }
                 />
+                <Route
+                    path="/terms"
+                    element={
+                        <>
+                            <Header />
+                            <TermsOfUse />
+                        </>
+                    }
+                />
                 <Route path="/feedback" element={<Feedback />} />
                 <Route
                     path="*"
