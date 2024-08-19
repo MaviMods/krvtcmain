@@ -74,7 +74,7 @@ const Header = () => {
         {
             icon: InfoRoundedIcon,
             text: "About us",
-            url: "/news/41308",
+            url: "/policy",
         },
         {
             icon: AssignmentIndRoundedIcon,
