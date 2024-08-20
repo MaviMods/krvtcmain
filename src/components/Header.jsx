@@ -72,6 +72,12 @@ const Header = () => {
     ];
 
     const BusineOptions = [
+        
+        {
+            icon: BadgeRoundedIcon,
+            text: "Staff",
+            url: "/staff",
+        },
         {
             icon: AssignmentIndRoundedIcon,
             text: "Employees",
@@ -81,11 +87,6 @@ const Header = () => {
             icon: FavoriteRoundedIcon,
             text: "Hall of Fame",
             url: "/hall-of-fame",
-        },
-        {
-            icon: BadgeRoundedIcon,
-            text: "Staff",
-            url: "/staff",
         },
         {
             icon: SecurityRoundedIcon,
