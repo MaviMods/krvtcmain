@@ -1,64 +1,36 @@
 {
     "staff": [
         {
-            "staff_id": 2147363,
+            "staff_id": 180519,
             "staff_color": "#FF0000"
         },
         {
-            "staff_id": 4697568,
+            "staff_id": 180520,
             "staff_color": "#781419"
         },
         {
-            "staff_id": 4940524,
+            "staff_id": 180521,
             "staff_color": "#470e11"
         },
         {
-            "staff_id": 5227469,
+            "staff_id": 180710,
             "staff_color": "#03c0ff"
         },
         {
-            "staff_id": 5130058,
+            "staff_id": 181180,
             "staff_color": "#ffb703"
         },
         {
-            "staff_id": 5226698,
+            "staff_id": 188092,
             "staff_color": "#ffb703"
         },
         {
-            "staff_id": 5027344,
+            "staff_id": 188094,
             "staff_color": "#bc03ff"
         },
         {
-            "staff_id": 5231089,
+            "staff_id": 188095,
             "staff_color": "#bc03ff"
-        },
-        {
-            "staff_id": 5240386,
-            "staff_color": "#bc03ff"
-        },
-        {
-            "staff_id": 4999300,
-            "staff_color": "#0374ff"
-        },
-        {
-            "staff_id": 5182147,
-            "staff_color": "#0374ff"
-        },
-        {
-            "staff_id": 5004826,
-            "staff_color": "#0374ff"
-        },
-        {
-            "staff_id": 5337190,
-            "staff_color": "#0374ff"
-        },
-        {
-            "staff_id": 4951170,
-            "staff_color": "#0374ff"
-        },
-        {
-            "staff_id": 5528064,
-            "staff_color": "#0374ff"
         }
     ],
     "partners": [
