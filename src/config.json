@@ -68,23 +68,43 @@
         },
         {
             "rol_id": "1138828009420378122",
-            "featured": true,
+            "featured": false,
             "rol_name": "CHIEF DESIGNER"
         },
         {
             "rol_id": "1141424121910136862",
-            "featured": true,
+            "featured": false,
             "rol_name": "HR TEAM"
         },
         {
             "rol_id": "1174336749812596837",
-            "featured": true,
+            "featured": false,
             "rol_name": "DESIGN TEAM"
         },
         {
             "rol_id": "1173244314919387146",
-            "featured": true,
+            "featured": false,
             "rol_name": "MARKETING TEAM"
+        },
+        {
+            "rol_id": "1169510307601842197",
+            "featured": false,
+            "rol_name": "BROADCAST DRIVERS"
+        },
+        {
+            "rol_id": "1099569691862765569",
+            "featured": false,
+            "rol_name": "STAFF ONLINE"
+        },
+        {
+            "rol_id": "1138827456548192336",
+            "featured": false,
+            "rol_name": "KERALA ROADRUNNERS"
+        },
+        {
+            "rol_id": "995562273353515120",
+            "featured": false,
+            "rol_name": "COMMUNITY MEMBERS"
         }
     ]
 }
