@@ -48,22 +48,22 @@
     "hall_of_fame": [
         {
             "rol_id": "1003998690182180864",
-            "featured": true,
+            "featured": false,
             "rol_name": "FOUNDER"
         },
         {
             "rol_id": "1046037783468326913",
-            "featured": true,
+            "featured": false,
             "rol_name": "CEO/CO FOUNDER"
         },
         {
             "rol_id": "1003999446490685504",
-            "featured": true,
+            "featured": false,
             "rol_name": "COO/CO FOUNDER"
         },
         {
             "rol_id": "995310404194537472",
-            "featured": true,
+            "featured": false,
             "rol_name": "CHIEF DEVELOPER"
         },
         {
