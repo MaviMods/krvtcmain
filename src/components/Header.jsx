@@ -41,7 +41,7 @@ const Header = () => {
     const HeaderOptions = [
         {
             icon: HomeRoundedIcon,
-            text: "Start",
+            text: "Home",
             url: "/",
         },
         {
@@ -53,11 +53,6 @@ const Header = () => {
             icon: NewspaperRoundedIcon,
             text: "News",
             url: "/news",
-        },
-        {
-            icon: HandshakeRoundedIcon,
-            text: "Partners",
-            url: "/news/31248",
         },
         {
             icon: HowToRegRoundedIcon,
