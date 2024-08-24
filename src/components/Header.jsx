@@ -28,6 +28,7 @@ import HandshakeRoundedIcon from "@mui/icons-material/HandshakeRounded";
 import BadgeRoundedIcon from "@mui/icons-material/BadgeRounded";
 import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
 import AlternateEmailRoundedIcon from "@mui/icons-material/AlternateEmailRounded";
+import CollectionsIcon from '@mui/icons-material/Collections';
 //
 
 import Switch from "@mui/material/Switch";
@@ -53,6 +54,11 @@ const Header = () => {
             icon: NewspaperRoundedIcon,
             text: "News",
             url: "/news",
+        },
+        {
+            icon: CollectionsIcon,
+            text: "Gallery",
+            url: "/gallery",
         },
         {
             icon: HowToRegRoundedIcon,
