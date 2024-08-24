@@ -1,5 +1,5 @@
 const Gallery = () => {
-  document.title = TITLE + " | Staff";
+  document.title = TITLE + " | Gallery";
   const data = [
     {
       imageLink:
