@@ -1,4 +1,5 @@
 import { TITLE } from "../../helpers/configs";
+import { useDarkMode } from "../../hooks/contex/DarkModeContex";
 
 const Gallery = () => {
   document.title = TITLE + " | Gallery";
