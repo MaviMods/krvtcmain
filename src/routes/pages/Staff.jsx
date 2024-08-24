@@ -124,7 +124,7 @@ const Staff = () => {
                             </Typography>
                             <div
                                 key={role}
-                                className="grid grid-cols-1 md:grid-cols-3 gap-5 p-6 justify-items:center align-item:center"
+                                className="grid grid-cols-1 md:grid-cols-3 gap-5 p-6 justify-center align-item-center"
                             >
                                 {staffCategory.map((member) => {
                                     return (
