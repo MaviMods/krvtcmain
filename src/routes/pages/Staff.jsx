@@ -124,7 +124,7 @@ const Staff = () => {
                             </Typography>
                             <div
                                 key={role}
-                                className="flex justify-center grid grid-cols-1 md:grid-cols-3 gap-5 p-6"
+                                className="grid grid-cols-1 md:grid-cols-3 gap-5 p-6 justify-items-center"
                             >
                                 {staffCategory.map((member) => {
                                     return (
