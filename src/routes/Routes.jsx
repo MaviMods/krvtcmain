@@ -13,6 +13,7 @@ import HallOfFame from "./pages/HallOfFame";
 import Employees from "./pages/Employees";
 import Notfound from "./pages/Notfound";
 import Feedback from "../components/Feedback";
+import Gallery from "./pages/Gallery";
 
 const RoutePage = () => {
     return (
@@ -97,6 +98,15 @@ const RoutePage = () => {
                         <>
                             <Header />
                             <Policy />
+                        </>
+                    }
+                />
+                <Route
+                    path="/gallery"
+                    element={
+                        <>
+                            <Header />
+                            <Gallery />
                         </>
                     }
                 />
