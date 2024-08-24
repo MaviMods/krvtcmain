@@ -111,7 +111,7 @@ const Staff = () => {
                     return (
                         <div
                             style={{ borderColor: STAFF_COLORS.roles[index] }}
-                            className={`flex flex-col rounded-lg border-2 md:ml-4 md:mr-4`}
+                            className={`flex justify-center flex-col rounded-lg border-2 md:ml-4 md:mr-4`}
                             key={role}
                         >
                             <Typography
