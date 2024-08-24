@@ -71,9 +71,9 @@ const AttributesCard = () => {
     };
 
     const renderAttributesP1 = () => {
-        const divAtributes = Atributes.slice(0, 3);
+        const divAtributes = Atributes.slice(0, 2);
         return (
-            <div className="grid grid-cols-1 md:grid-cols-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2">
                 {divAtributes.map((atribute, index) => {
                     return AttributeCard(
                         index,
@@ -87,7 +87,7 @@ const AttributesCard = () => {
     };
 
     const renderAttributesP2 = () => {
-        const divAtributes = Atributes.slice(3, 5);
+        const divAtributes = Atributes.slice(2, 5);
         return (
             <div className="grid grid-cols-1 sm:grid-cols-2">
                 {divAtributes.map((atribute, index) => {
