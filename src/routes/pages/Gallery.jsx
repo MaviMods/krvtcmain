@@ -1,5 +1,8 @@
+import { TITLE } from "../../helpers/configs";
+
 const Gallery = () => {
   document.title = TITLE + " | Gallery";
+  const { themeTatailwind } = useDarkMode();
   const data = [
     {
       imageLink:
