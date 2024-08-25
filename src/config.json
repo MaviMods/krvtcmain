@@ -48,12 +48,12 @@
     "hall_of_fame": [
         {
             "rol_id": "1277264243963723907",
-            "featured": true,
+            "featured": false,
             "rol_name": "DRIVER OF THE MONTH"
         },
         {
             "rol_id": "1277264361936912436",
-            "featured": true,
+            "featured": false,
             "rol_name": "PICTURE OF THE MONTH"
         }
     ]
