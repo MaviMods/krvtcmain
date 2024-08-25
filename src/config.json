@@ -47,64 +47,14 @@
     ],
     "hall_of_fame": [
         {
-            "rol_id": "1003998690182180864",
+            "rol_id": "1277264243963723907",
             "featured": true,
-            "rol_name": "FOUNDER"
+            "rol_name": "DRIVER OF THE MONTH"
         },
         {
-            "rol_id": "1046037783468326913",
+            "rol_id": "1277264361936912436",
             "featured": true,
-            "rol_name": "CEO/CO FOUNDER"
-        },
-        {
-            "rol_id": "1003999446490685504",
-            "featured": true,
-            "rol_name": "COO/CO FOUNDER"
-        },
-        {
-            "rol_id": "995310404194537472",
-            "featured": true,
-            "rol_name": "CHIEF DEVELOPER"
-        },
-        {
-            "rol_id": "1138828009420378122",
-            "featured": true,
-            "rol_name": "CHIEF DESIGNER"
-        },
-        {
-            "rol_id": "1141424121910136862",
-            "featured": false,
-            "rol_name": "HR TEAM"
-        },
-        {
-            "rol_id": "1174336749812596837",
-            "featured": false,
-            "rol_name": "DESIGN TEAM"
-        },
-        {
-            "rol_id": "1173244314919387146",
-            "featured": false,
-            "rol_name": "MARKETING TEAM"
-        },
-        {
-            "rol_id": "1169510307601842197",
-            "featured": false,
-            "rol_name": "BROADCAST DRIVERS"
-        },
-        {
-            "rol_id": "1099569691862765569",
-            "featured": false,
-            "rol_name": "STAFF ONLINE"
-        },
-        {
-            "rol_id": "1138827456548192336",
-            "featured": false,
-            "rol_name": "KERALA ROADRUNNERS"
-        },
-        {
-            "rol_id": "995562273353515120",
-            "featured": false,
-            "rol_name": "COMMUNITY MEMBERS"
+            "rol_name": "PICTURE OF THE MONTH"
         }
     ]
 }
