@@ -7,27 +7,27 @@ const Gallery = () => {
   const data = [
     {
       imageLink:
-        "https://media.discordapp.net/attachments/1138825132098465884/1267056153913724989/ets2_20240727_223850_00.png?ex=66cafdff&is=66c9ac7f&hm=6ed9ea52364264ef92f758d79131dbc26ccc2e96b2f468587be37296c10829c0&",
+        "https://i.postimg.cc/vBdZk3S4/ets2-20240815-113359-00.png",
     },
     {
       imageLink:
-        "https://media.discordapp.net/attachments/1138825132098465884/1267056153339367477/ets2_20240727_223821_00.png?ex=66cafdff&is=66c9ac7f&hm=20b49b37b02c086d1f6a047b2e9095101d002cc1d852c14c1dad401e9b9202cf&",
+        "https://i.postimg.cc/nzkp5ZDW/ets2-20240813-164252-00.png",
     },
     {
       imageLink:
-        "https://media.discordapp.net/attachments/1138825132098465884/1266827216696639509/ets2_20240727_200559_00.png?ex=66cad188&is=66c98008&hm=a7434ffd0b3e30aeecf076092902e7bb5f7e91df7aa45f218573dfb0618bddc3&",
+        "https://i.postimg.cc/8kZTmpDJ/20240615211515-1.jpg",
     },
     {
       imageLink:
-        "https://media.discordapp.net/attachments/1138825132098465884/1266827217925570581/ets2_20240727_200630_00.png?ex=66cad189&is=66c98009&hm=717b17afffa47c3ca2e9e85f73da33c76b0fb769f7a250d13f954dc42f2d5092&",
+        "https://i.postimg.cc/VLT12KJz/20240615215717-1.jpg",
     },
     {
       imageLink:
-        "https://media.discordapp.net/attachments/1138825132098465884/1261717988654972938/ets2_20240713_191433_00.png?ex=66cb58f2&is=66ca0772&hm=c131ce523d1b19f90e4602b4021d2b63f88589a6a42f7800a2dd702e07c01bb7&",
+        "https://i.postimg.cc/R01B69X0/20240615224102-1.jpg",
     },
     {
       imageLink:
-        "https://media.discordapp.net/attachments/1138825132098465884/1251587750579273799/20240615211515_1.jpg?ex=66cb686d&is=66ca16ed&hm=9255e0b8a30daaeb6368fef933efe331e4a231bd64186a6de9a222695796c6d9&",
+        "https://i.postimg.cc/prrb6jx9/ets2-20240211-195511-00.png",
     },
     {
       imageLink:
