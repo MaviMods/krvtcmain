@@ -205,69 +205,58 @@ const Header = () => {
                         />
                     </div>
                     <div className="md:flex ml-5 hidden justify-start w-full">
-                        {HeaderOptions.slice(0, 4).map((option, index) => (
-                            <div className="flex" key={index}>
-                                <Button
-                                    startIcon={<option.icon />}
-                                    color="inherit"
-                                    onClick={() => navigate(option.url)}
-                                >
-                                    {option.text}
-                                </Button>
-                                <Divider
-                                    sx={{ mr: 1 }}
-                                    orientation="vertical"
-                                    variant="middle"
-                                    flexItem
-                                />
-                            </div>
-                        ))}
-                        <Button
-                            color="inherit"
-                            id="basic-button"
-                            aria-controls={open ? "basic-menu" : undefined}
-                            aria-haspopup="true"
-                            aria-expanded={open ? "true" : undefined}
-                            onClick={handleClick}
-                            onMouseEnter={(event) => handleClick(event)}
-                            startIcon={<BusinessRoundedIcon />}
-                            endIcon={<KeyboardArrowDownRoundedIcon />}
-                        >
-                            Company
-                        </Button>
-                        <Menu
-                            id="basic-menu"
-                            anchorEl={anchorEl}
-                            open={open}
-                            onClose={handleClose}
-                            MenuListProps={{
-                                "aria-labelledby": "basic-button",
-                            }}
-                        >
-                            <div onMouseLeave={() => handleClose()}>
-                                {BusineOptions.map((option, index) => (
-                                    <MenuItem
-                                        key={index}
-                                        onClick={() => {
-                                            navigate(option.url);
-                                            handleClose();
-                                        }}
-                                    >
-                                        <ListItemIcon>
-                                            {<option.icon />}
-                                        </ListItemIcon>
-                                        <ListItemText primary={option.text} />
-                                    </MenuItem>
-                                ))}
-                            </div>
-                        </Menu>
-                        <Divider
-                            sx={{ mr: 1 }}
-                            orientation="vertical"
-                            variant="middle"
-                            flexItem
-                        />
-                    </div>
+    {HeaderOptions.slice(0, 4).map((option, index) => (
+        <div className="flex" key={index}>
+            <Button
+                startIcon={<option.icon />}
+                color="inherit"
+                onClick={() => navigate(option.url)}
+            >
+                {option.text}
+            </Button>
+            {/* Removed the Divider here */}
+        </div>
+    ))}
+    {/* No Divider between Booking and Company */}
+    <Button
+        color="inherit"
+        id="basic-button"
+        aria-controls={open ? "basic-menu" : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? "true" : undefined}
+        onClick={handleClick}
+        onMouseEnter={(event) => handleClick(event)}
+        startIcon={<BusinessRoundedIcon />}
+        endIcon={<KeyboardArrowDownRoundedIcon />}
+    >
+        Company
+    </Button>
+    <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+            "aria-labelledby": "basic-button",
+        }}
+    >
+        <div onMouseLeave={() => handleClose()}>
+            {BusineOptions.map((option, index) => (
+                <MenuItem
+                    key={index}
+                    onClick={() => {
+                        navigate(option.url);
+                        handleClose();
+                    }}
+                >
+                    <ListItemIcon>{<option.icon />}</ListItemIcon>
+                    <ListItemText primary={option.text} />
+                </MenuItem>
+            ))}
+        </div>
+    </Menu>
+</div>
+                    
 
                     <div className="md:flex hidden justify-end w-full">
                         <Divider
