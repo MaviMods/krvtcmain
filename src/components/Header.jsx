@@ -197,12 +197,6 @@ const Header = () => {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Divider
-                            sx={{ mr: 1 }}
-                            orientation="vertical"
-                            variant="middle"
-                            flexItem
-                        />
                     </div>
                     <div className="md:flex ml-5 hidden justify-start w-full">
     {HeaderOptions.slice(0, 4).map((option, index) => (
@@ -259,12 +253,6 @@ const Header = () => {
                     
 
                     <div className="md:flex hidden justify-end w-full">
-                        <Divider
-                            sx={{ mr: 1 }}
-                            orientation="vertical"
-                            variant="middle"
-                            flexItem
-                        />
                         {HeaderOptions.slice(4).map((option, index) => (
                             <div className="flex" key={index}>
                                 <Button
