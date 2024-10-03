@@ -57,14 +57,14 @@ const Header = () => {
             url: "/news",
         },
         {
-            icon: CollectionsIcon,
-            text: "Gallery",
-            url: "/gallery",
-        },
-        {
             icon: LibraryBooksIcon,
             text: "Booking",
             url: "Booking",
+        },
+        {
+            icon: CollectionsIcon,
+            text: "Gallery",
+            url: "/gallery",
         },
         {
             icon: HowToRegRoundedIcon,
