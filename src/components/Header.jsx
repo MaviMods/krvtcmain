@@ -285,12 +285,6 @@ const Header = () => {
                                 >
                                     {option.text}
                                 </Button>
-                                <Divider
-                                    sx={{ mr: 1 }}
-                                    orientation="vertical"
-                                    variant="middle"
-                                    flexItem
-                                />
                             </div>
                         ))}
                     </div>
