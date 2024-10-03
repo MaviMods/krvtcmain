@@ -205,7 +205,7 @@ const Header = () => {
                         />
                     </div>
                     <div className="md:flex ml-5 hidden justify-start w-full">
-                        {HeaderOptions.slice(0, 3).map((option, index) => (
+                        {HeaderOptions.slice(0, 4).map((option, index) => (
                             <div className="flex" key={index}>
                                 <Button
                                     startIcon={<option.icon />}
@@ -276,7 +276,7 @@ const Header = () => {
                             variant="middle"
                             flexItem
                         />
-                        {HeaderOptions.slice(3).map((option, index) => (
+                        {HeaderOptions.slice(4).map((option, index) => (
                             <div className="flex" key={index}>
                                 <Button
                                     startIcon={<option.icon />}
