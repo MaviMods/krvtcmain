@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Events from "./pages/Events";
 import News from "./pages/News";
 import Policy from "./pages/Policy";
+import Booking from "./pages/Booking";
 import NewView from "./pages/NewView";
 import Staff from "./pages/Staff";
 import TermsOfUse from "./pages/TermsOfUse";
@@ -89,6 +90,15 @@ const RoutePage = () => {
                         <>
                             <Header />
                             <Employees />
+                        </>
+                    }
+                />
+                <Route
+                    path="/booking"
+                    element={
+                        <>
+                            <Header />
+                            <Booking />
                         </>
                     }
                 />
