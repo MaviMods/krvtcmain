@@ -59,7 +59,7 @@ const Header = () => {
         {
             icon: LibraryBooksIcon,
             text: "Booking",
-            url: "Booking",
+            url: "/booking",
         },
         {
             icon: CollectionsIcon,
