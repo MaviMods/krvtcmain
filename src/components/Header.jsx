@@ -14,6 +14,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 
 // icons
 import MenuIcon from "@mui/icons-material/Menu";
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import IconButton from "@mui/material/IconButton";
 import AssignmentIndRoundedIcon from "@mui/icons-material/AssignmentIndRounded";
 import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
@@ -59,6 +60,11 @@ const Header = () => {
             icon: CollectionsIcon,
             text: "Gallery",
             url: "/gallery",
+        },
+        {
+            icon: LibraryBooksIcon,
+            text: "Booking",
+            url: "Booking",
         },
         {
             icon: HowToRegRoundedIcon,
