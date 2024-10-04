@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './ImageGallery.css'; // Import the CSS file
+import './ImageGallery.css';
 
 const ImageGallery = () => {
     const [images, setImages] = useState([]);
@@ -12,7 +12,7 @@ const ImageGallery = () => {
             const response = await axios.get('https://bookback.koyeb.app/latest-images');
             setImages(response.data.images);
         } catch (error) {
-            console.error('Error fetching images:', error);
+            console.error('Error fetching images:', error); // Logging the error to the console
         }
     };
 
@@ -22,14 +22,13 @@ const ImageGallery = () => {
 
     return (
         <div>
-            <h2>Latest Images</h2>
             <div className="image-gallery">
-                {/* Reverse the order of images */}
-                {images.reverse().map((image, index) => (
+                {images.map((image, index) => (
                     <img
                         key={index}
                         src={image}
                         alt={`Discord image ${index + 1}`}
+                        style={{ width: '200px', margin: '10px' }}
                     />
                 ))}
             </div>
