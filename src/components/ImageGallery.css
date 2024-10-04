@@ -1,0 +1,22 @@
+/* src/components/ImageGallery.css */
+
+.image-gallery {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow images to wrap */
+    justify-content: center; /* Center align the images */
+    margin: 20px; /* Add margin around the gallery */
+}
+
+.image-gallery img {
+    width: 200px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Space between images */
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    transition: transform 0.3s ease; /* Smooth transformation on hover */
+}
+
+/* Hover effect for images */
+.image-gallery img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
