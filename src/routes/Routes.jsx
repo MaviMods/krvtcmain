@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ScrollTop from "./ScrollTop";
 import Header from "../components/Header";
+import ImageGallery from "../components/ImageGallery";
 import Home from "./pages/Home";
 import Events from "./pages/Events";
 import News from "./pages/News";
@@ -116,7 +117,7 @@ const RoutePage = () => {
                     element={
                         <>
                             <Header />
-                            <Gallery />
+                            <ImageGallery />
                         </>
                     }
                 />
