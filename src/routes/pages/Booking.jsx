@@ -25,7 +25,7 @@ const Booking = () => {
     };
 
     const eventSlotImages = {
-    20139: ['https://i.imghippo.com/files/AUkY11727904983.png', 'https://i.imghippo.com/files/AUkY11727904983.png', 'https://i.imghippo.com/files/AUkY11727904983.png', 'https://i.imghippo.com/files/AUkY11727904983.png', 'https://i.imghippo.com/files/AUkY11727904983.png', 'https://i.imghippo.com/files/AUkY11727904983.png', 'https://i.imghippo.com/files/AUkY11727904983.png', 'https://i.imghippo.com/files/AUkY11727904983.png', 'https://i.imghippo.com/files/AUkY11727904983.png'], // Event ID 1
+    26658: ['https://i.postimg.cc/VvzfXR4H/slot-1-2.png', 'https://i.postimg.cc/wTTxvw11/slot-3-4.png', 'https://i.postimg.cc/Bnjq5tcs/slot-5-6.png', 'https://i.postimg.cc/qRT4dwfM/slot-7-12.png', 'https://i.postimg.cc/4y4GY3ND/slot-1314.png', 'https://i.postimg.cc/fW5Z6Y8D/slot-15-16.png', 'https://i.postimg.cc/fyb4wg8Z/slot-17-18.png', 'https://i.postimg.cc/wxW8WgBB/slot-19-120.png'], // Event ID 1
     2: ['slot2_image_url1.jpg', 'slot2_image_url2.jpg'], // Event ID 2
     // Add more event IDs with corresponding slot images
 };
