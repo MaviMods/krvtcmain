@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
 import { useDarkMode } from "../../hooks/contex/DarkModeContex";
 import './Booking.css';
 
@@ -19,51 +20,55 @@ const Booking = () => {
     const [loadingBookings, setLoadingBookings] = useState(false);
     const [loadingEvents, setLoadingEvents] = useState(false);
 
-    const cleanDescription = (description) => {
-        if (!description) return '';
-        return description.replace(/!\[.*?\]\(.*?\)/g, '').replace(/\*\*/g, '').replace(/\\r\\n/g, ' ').trim();
+    const eventSlotImages = {
+        26658: ['https://i.postimg.cc/VvzfXR4H/slot-1-2.png', 'https://i.postimg.cc/wTTxvw11/slot-3-4.png', 'https://i.postimg.cc/Bnjq5tcs/slot-5-6.png', 'https://i.postimg.cc/qRT4dwfM/slot-7-12.png', 'https://i.postimg.cc/4y4GY3ND/slot-1314.png', 'https://i.postimg.cc/fW5Z6Y8D/slot-15-16.png', 'https://i.postimg.cc/fyb4wg8Z/slot-17-18.png', 'https://i.postimg.cc/wxW8WgBB/slot-19-120.png'],
+        2: ['slot2_image_url1.jpg', 'slot2_image_url2.jpg'],
     };
 
-    const eventSlotImages = {
-    26658: ['https://i.postimg.cc/VvzfXR4H/slot-1-2.png', 'https://i.postimg.cc/wTTxvw11/slot-3-4.png', 'https://i.postimg.cc/Bnjq5tcs/slot-5-6.png', 'https://i.postimg.cc/qRT4dwfM/slot-7-12.png', 'https://i.postimg.cc/4y4GY3ND/slot-1314.png', 'https://i.postimg.cc/fW5Z6Y8D/slot-15-16.png', 'https://i.postimg.cc/fyb4wg8Z/slot-17-18.png', 'https://i.postimg.cc/wxW8WgBB/slot-19-120.png'], // Event ID 1
-    2: ['slot2_image_url1.jpg', 'slot2_image_url2.jpg'], // Event ID 2
-    // Add more event IDs with corresponding slot images
-};
-
     const fetchEvents = async () => {
-        setLoadingEvents(true); // Start loading
+        setLoadingEvents(true);
         try {
             const response = await axios.get('https://mavimods.serv00.net/backtest.php');
             if (response.data && !response.data.error) {
                 setEvents(response.data.upcoming_events);
             } else {
                 console.error('Error fetching events:', response.data.message);
+                alert('Failed to fetch events. Please try again later.');
             }
         } catch (error) {
             console.error('Error fetching events:', error);
+            alert('An error occurred while fetching events. Please check your connection.');
         } finally {
-            setLoadingEvents(false); // Stop loading
+            setLoadingEvents(false);
         }
     };
 
     const fetchBookings = async () => {
-    if (selectedEvent && selectedEvent.name) {
-        setLoadingBookings(true); // Start loading
-        const formattedEventName = selectedEvent.name.replace(/\s+/g, '/');
-        const bookingUrl = `https://bookback.koyeb.app/api/bookings/${encodeURIComponent(formattedEventName)}`;
-        try {
-            const response = await axios.get(bookingUrl);
-            setBookings(response.data); // Only approved bookings are fetched from the backend
-        } catch (error) {
-            console.error('Error fetching bookings:', error);
-        } finally {
-            setLoadingBookings(false); // Stop loading
+        if (selectedEvent && selectedEvent.name) {
+            setLoadingBookings(true);
+            const formattedEventName = selectedEvent.name.replace(/\s+/g, '/');
+            const bookingUrl = `https://bookback.koyeb.app/api/bookings/${encodeURIComponent(formattedEventName)}`;
+            try {
+                const response = await axios.get(bookingUrl);
+                setBookings(response.data);
+            } catch (error) {
+                console.error('Error fetching bookings:', error);
+                alert('Failed to fetch bookings. Please try again later.');
+            } finally {
+                setLoadingBookings(false);
+            }
         }
-    }
-};
+    };
 
     const handleBooking = async (e) => {
         e.preventDefault();
+
+        // Validate slot numbers
+        if (isNaN(slotNumber) || (extraSlot === 'Yes' && isNaN(extraSlotNumber))) {
+            alert('Slot numbers must be numeric.');
+            return;
+        }
+
         if (extraSlot === 'Yes' && !extraSlotNumber) {
             alert('Extra Slot Number is required when selecting an extra slot.');
             return;
@@ -129,21 +134,23 @@ const Booking = () => {
                 </select>
 
                 {selectedEvent && (
-    <div className="event-description">
-        <p>{cleanDescription(selectedEvent.description)}</p>
+                    <div className="event-description">
+                        <ReactMarkdown>
+                            {selectedEvent.description}
+                        </ReactMarkdown>
 
-        {/* Display Multiple Slot Images in a Grid */}
-        {eventSlotImages[selectedEvent.id] && eventSlotImages[selectedEvent.id].length > 0 && (
-            <div className="slot-images-grid">
-                {eventSlotImages[selectedEvent.id].map((image, index) => (
-                    <a href={image} target="_blank" rel="noopener noreferrer" key={index}>
-                <img src={image} alt={`Slot ${index + 1}`} />
-            </a>
-                ))}
-            </div>
-        )}
-    </div>
-)}
+                        {/* Display Multiple Slot Images in a Grid */}
+                        {eventSlotImages[selectedEvent.id] && eventSlotImages[selectedEvent.id].length > 0 && (
+                            <div className="slot-images-grid">
+                                {eventSlotImages[selectedEvent.id].map((image, index) => (
+                                    <a href={image} target="_blank" rel="noopener noreferrer" key={index}>
+                                        <img src={image} alt={`Slot ${index + 1}`} />
+                                    </a>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                )}
 
                 <input type="text" placeholder="Company Name" value={company} onChange={(e) => setCompany(e.target.value)} required />
                 <input type="text" placeholder="Slot Number" value={slotNumber} onChange={(e) => setSlotNumber(e.target.value)} required />
@@ -171,30 +178,29 @@ const Booking = () => {
             </form>
 
             <h2>Current Bookings for {selectedEvent ? selectedEvent.name : 'Event'}</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Company Name</th>
-                            <th>Slot(s)</th>
-                            <th>Status</th>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company Name</th>
+                        <th>Slot(s)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {bookings.map(booking => (
+                        <tr key={booking._id}>
+                            <td>{booking.company}</td>
+                            <td>
+                                {booking.slotNumber}
+                                {booking.extraSlot === 'Yes' && ` + ${booking.extraSlotNumber}`}
+                            </td>
+                            <td>{booking.status}</td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        {bookings.map(booking => (
-                            <tr key={booking._id}>
-                                <td>{booking.company}</td>
-                                <td>
-                                    {booking.slotNumber}
-                                    {booking.extraSlot === 'Yes' && ` + ${booking.extraSlotNumber}`}
-                                </td>
-                                <td>{booking.status}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+                    ))}
+                </tbody>
+            </table>
         </div>
     );
 };
 
 export default Booking;
-                         
