@@ -146,7 +146,10 @@ const Booking = () => {
                 {selectedEvent && (
                     <div className="event-description">
                         <ReactMarkdown>
-                            {selectedEvent.description}
+                            {selectedEvent.description.replace(
+                                /<p[^>]*>([\s\S]*?)<\/p>/g, // Match <p> tags
+                                (match, p1) => stripHtmlTags(p1) // Remove HTML tags from the event name
+                            )}
                         </ReactMarkdown>
 
                         {/* Display Multiple Slot Images in a Grid */}
