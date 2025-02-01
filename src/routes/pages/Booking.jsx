@@ -20,6 +20,12 @@ const Booking = () => {
     const [loadingBookings, setLoadingBookings] = useState(false);
     const [loadingEvents, setLoadingEvents] = useState(false);
 
+    // Function to strip HTML tags
+    const stripHtmlTags = (html) => {
+        if (!html) return '';
+        return html.replace(/<[^>]+>/g, ''); // Remove all HTML tags
+    };
+
     const eventSlotImages = {
         26658: ['https://i.postimg.cc/VvzfXR4H/slot-1-2.png', 'https://i.postimg.cc/wTTxvw11/slot-3-4.png', 'https://i.postimg.cc/Bnjq5tcs/slot-5-6.png', 'https://i.postimg.cc/qRT4dwfM/slot-7-12.png', 'https://i.postimg.cc/4y4GY3ND/slot-1314.png', 'https://i.postimg.cc/fW5Z6Y8D/slot-15-16.png', 'https://i.postimg.cc/fyb4wg8Z/slot-17-18.png', 'https://i.postimg.cc/wxW8WgBB/slot-19-120.png'],
         2: ['slot2_image_url1.jpg', 'slot2_image_url2.jpg'],
@@ -50,7 +56,11 @@ const Booking = () => {
             const bookingUrl = `https://bookback.koyeb.app/api/bookings/${encodeURIComponent(formattedEventName)}`;
             try {
                 const response = await axios.get(bookingUrl);
-                setBookings(response.data);
+                // Sort bookings by slotNumber
+                const sortedBookings = response.data.sort((a, b) => {
+                    return parseInt(a.slotNumber) - parseInt(b.slotNumber);
+                });
+                setBookings(sortedBookings);
             } catch (error) {
                 console.error('Error fetching bookings:', error);
                 alert('Failed to fetch bookings. Please try again later.');
@@ -122,13 +132,13 @@ const Booking = () => {
 
     return (
         <div className={`container ${themeTatailwind}`}>
-            <h1>Slot Booking for {selectedEvent ? selectedEvent.name : 'Event'}</h1>
+            <h1>Slot Booking for {selectedEvent ? stripHtmlTags(selectedEvent.name) : 'Event'}</h1>
             <form onSubmit={handleBooking}>
                 <select onChange={(e) => handleEventSelect(e.target.value)} value={eventId} required>
                     <option value="">Select an Event</option>
                     {events.map(event => (
                         <option key={event.id} value={event.id}>
-                            {event.name}
+                            {stripHtmlTags(event.name)}
                         </option>
                     ))}
                 </select>
@@ -177,7 +187,7 @@ const Booking = () => {
                 <button type="submit" disabled={loadingBookings}>Book Slot</button>
             </form>
 
-            <h2>Current Bookings for {selectedEvent ? selectedEvent.name : 'Event'}</h2>
+            <h2>Current Bookings for {selectedEvent ? stripHtmlTags(selectedEvent.name) : 'Event'}</h2>
             <table>
                 <thead>
                     <tr>
