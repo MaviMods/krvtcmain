@@ -19,16 +19,12 @@ const Booking = () => {
     const [events, setEvents] = useState([]);
     const [loadingBookings, setLoadingBookings] = useState(false);
     const [loadingEvents, setLoadingEvents] = useState(false);
+    const [slotImages, setSlotImages] = useState([]); // State for slot images
 
     // Function to strip HTML tags
     const stripHtmlTags = (html) => {
         if (!html) return '';
         return html.replace(/<[^>]+>/g, ''); // Remove all HTML tags
-    };
-
-    const eventSlotImages = {
-        26658: ['https://i.postimg.cc/VvzfXR4H/slot-1-2.png', 'https://i.postimg.cc/wTTxvw11/slot-3-4.png', 'https://i.postimg.cc/Bnjq5tcs/slot-5-6.png', 'https://i.postimg.cc/qRT4dwfM/slot-7-12.png', 'https://i.postimg.cc/4y4GY3ND/slot-1314.png', 'https://i.postimg.cc/fW5Z6Y8D/slot-15-16.png', 'https://i.postimg.cc/fyb4wg8Z/slot-17-18.png', 'https://i.postimg.cc/wxW8WgBB/slot-19-120.png'],
-        2: ['slot2_image_url1.jpg', 'slot2_image_url2.jpg'],
     };
 
     const fetchEvents = async () => {
@@ -67,6 +63,20 @@ const Booking = () => {
             } finally {
                 setLoadingBookings(false);
             }
+        }
+    };
+
+    // Fetch slot images for the selected event
+    const fetchSlotImages = async (eventId) => {
+        try {
+            const response = await axios.get(`https://bookback.koyeb.app/slot-images/${eventId}`);
+            if (response.data.success) {
+                setSlotImages(response.data.slotImages);
+            } else {
+                console.error('Failed to fetch slot images:', response.data.message);
+            }
+        } catch (error) {
+            console.error('Error fetching slot images:', error);
         }
     };
 
@@ -120,6 +130,7 @@ const Booking = () => {
         const event = events.find(event => event.id === parseInt(id));
         setEventId(id);
         setSelectedEvent(event || null);
+        fetchSlotImages(id); // Fetch slot images for the selected event
     };
 
     useEffect(() => {
@@ -153,11 +164,11 @@ const Booking = () => {
                         </ReactMarkdown>
 
                         {/* Display Multiple Slot Images in a Grid */}
-                        {eventSlotImages[selectedEvent.id] && eventSlotImages[selectedEvent.id].length > 0 && (
+                        {slotImages.length > 0 && (
                             <div className="slot-images-grid">
-                                {eventSlotImages[selectedEvent.id].map((image, index) => (
-                                    <a href={image} target="_blank" rel="noopener noreferrer" key={index}>
-                                        <img src={image} alt={`Slot ${index + 1}`} />
+                                {slotImages.map((image, index) => (
+                                    <a href={image.imageUrl} target="_blank" rel="noopener noreferrer" key={index}>
+                                        <img src={image.imageUrl} alt={`Slot ${index + 1}`} />
                                     </a>
                                 ))}
                             </div>
