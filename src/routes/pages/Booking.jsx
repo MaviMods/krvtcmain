@@ -67,7 +67,7 @@ const Booking = () => {
 
     const fetchSlotImages = async (eventName) => {
         try {
-            const response = await axios.get(`https://bookback.koyeb.app/slot-images/${encodeURIComponent(eventName)}`);
+            const response = await axios.get(`https://bookback.koyeb.app/slot-images/${eventName}`);
             if (response.data.success) {
                 setSlotImages(response.data.slotImages);
             } else {
