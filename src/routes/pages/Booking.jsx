@@ -67,9 +67,9 @@ const Booking = () => {
     };
 
     // Fetch slot images for the selected event
-    const fetchSlotImages = async (eventId) => {
+    const fetchSlotImages = async (eventName) => {
         try {
-            const response = await axios.get(`https://bookback.koyeb.app/slot-images/${eventId}`);
+            const response = await axios.get(`https://bookback.koyeb.app/slot-images/${encodeURIComponent(eventName)}`);
             if (response.data.success) {
                 setSlotImages(response.data.slotImages);
             } else {
