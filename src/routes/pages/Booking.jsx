@@ -66,17 +66,19 @@ const Booking = () => {
     };
 
     const fetchSlotImages = async (eventName) => {
-        try {
-            const response = await axios.get(`https://bookback.koyeb.app/slot-images/${eventName}`);
-            if (response.data.success) {
-                setSlotImages(response.data.slotImages);
-            } else {
-                console.error('Failed to fetch slot images:', response.data.message);
-            }
-        } catch (error) {
-            console.error('Error fetching slot images:', error);
+    try {
+        // Replace spaces with slashes and encode the eventName
+        const formattedEventName = encodeURIComponent(eventName.replace(/\s+/g, '/'));
+        const response = await axios.get(`https://bookback.koyeb.app/slot-images/${formattedEventName}`);
+        if (response.data.success) {
+            setSlotImages(response.data.slotImages);
+        } else {
+            console.error('Failed to fetch slot images:', response.data.message);
         }
-    };
+    } catch (error) {
+        console.error('Error fetching slot images:', error);
+    }
+};
 
     const handleBooking = async (e) => {
         e.preventDefault();
