@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import ReactMarkdown from 'react-markdown';
 import { useDarkMode } from "../../hooks/contex/DarkModeContex";
 import './Booking.css';
 
@@ -19,12 +18,12 @@ const Booking = () => {
     const [events, setEvents] = useState([]);
     const [loadingBookings, setLoadingBookings] = useState(false);
     const [loadingEvents, setLoadingEvents] = useState(false);
-    const [slotImages, setSlotImages] = useState([]); // State for slot images
+    const [slotImages, setSlotImages] = useState([]);
 
     // Function to strip HTML tags
     const stripHtmlTags = (html) => {
         if (!html) return '';
-        return html.replace(/<[^>]+>/g, ''); // Remove all HTML tags
+        return html.replace(/<[^>]+>/g, '');
     };
 
     const fetchEvents = async () => {
@@ -52,7 +51,6 @@ const Booking = () => {
             const bookingUrl = `https://bookback.koyeb.app/api/bookings/${encodeURIComponent(formattedEventName)}`;
             try {
                 const response = await axios.get(bookingUrl);
-                // Sort bookings by slotNumber
                 const sortedBookings = response.data.sort((a, b) => {
                     return parseInt(a.slotNumber) - parseInt(b.slotNumber);
                 });
@@ -66,7 +64,6 @@ const Booking = () => {
         }
     };
 
-    // Fetch slot images for the selected event
     const fetchSlotImages = async (eventName) => {
         try {
             const response = await axios.get(`https://bookback.koyeb.app/slot-images/${encodeURIComponent(eventName)}`);
@@ -83,7 +80,6 @@ const Booking = () => {
     const handleBooking = async (e) => {
         e.preventDefault();
 
-        // Validate slot numbers
         if (isNaN(slotNumber) || (extraSlot === 'Yes' && isNaN(extraSlotNumber))) {
             alert('Slot numbers must be numeric.');
             return;
@@ -110,7 +106,6 @@ const Booking = () => {
                 const response = await axios.post(`https://bookback.koyeb.app/api/bookings/${encodeURIComponent(formattedEventName)}`, bookingDetails);
                 console.log('Booking successful:', response.data);
                 alert('Booking request sent for approval.');
-                // Clear the form fields after successful booking
                 setDriver('');
                 setCompany('');
                 setusername('');
@@ -118,7 +113,7 @@ const Booking = () => {
                 setSlotNumber('');
                 setExtraSlot('No');
                 setExtraSlotNumber('');
-                fetchBookings(); // Fetch bookings after a successful booking
+                fetchBookings();
             } catch (error) {
                 console.error('Error booking slot:', error.response?.data || error.message);
                 alert('Failed to book slot. Please try again.');
@@ -130,7 +125,9 @@ const Booking = () => {
         const event = events.find(event => event.id === parseInt(id));
         setEventId(id);
         setSelectedEvent(event || null);
-        fetchSlotImages(id); // Fetch slot images for the selected event
+        if (event) {
+            fetchSlotImages(event.name);
+        }
     };
 
     useEffect(() => {
@@ -156,14 +153,8 @@ const Booking = () => {
 
                 {selectedEvent && (
                     <div className="event-description">
-                        <ReactMarkdown>
-                            {selectedEvent.description.replace(
-                                /<p[^>]*>([\s\S]*?)<\/p>/g, // Match <p> tags
-                                (match, p1) => stripHtmlTags(p1) // Remove HTML tags from the event name
-                            )}
-                        </ReactMarkdown>
+                        <p>{stripHtmlTags(selectedEvent.description)}</p>
 
-                        {/* Display Multiple Slot Images in a Grid */}
                         {slotImages.length > 0 && (
                             <div className="slot-images-grid">
                                 {slotImages.map((image, index) => (
@@ -183,7 +174,7 @@ const Booking = () => {
                 <input type="text" placeholder="Number of Drivers" value={driver} onChange={(e) => setDriver(e.target.value)} required />
 
                 <select onChange={(e) => setExtraSlot(e.target.value)} value={extraSlot} required>
-                    <option value="No">Need More Slot</option>
+                    <option value="">Need More Slot</option>
                     <option value="No">No</option>
                     <option value="Yes">Yes</option>
                 </select>
