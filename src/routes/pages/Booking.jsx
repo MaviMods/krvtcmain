@@ -180,7 +180,7 @@ const Booking = () => {
                 <input type="text" placeholder="Number of Drivers" value={driver} onChange={(e) => setDriver(e.target.value)} required />
 
                 <select onChange={(e) => setExtraSlot(e.target.value)} value={extraSlot} required>
-                    <option value="">Need More Slot</option>
+                    <option value="No">Need More Slot</option>
                     <option value="No">No</option>
                     <option value="Yes">Yes</option>
                 </select>
