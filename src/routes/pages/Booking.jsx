@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
 import { useDarkMode } from "../../hooks/contex/DarkModeContex";
 import './Booking.css';
 
@@ -153,7 +154,12 @@ const Booking = () => {
 
                 {selectedEvent && (
                     <div className="event-description">
-                        <p>{stripHtmlTags(selectedEvent.description)}</p>
+                        <ReactMarkdown>
+                            {selectedEvent.description.replace(
+                                /<p[^>]*>([\s\S]*?)<\/p>/g, // Match <p> tags
+                                (match, p1) => stripHtmlTags(p1) // Remove HTML tags from the event name
+                            )}
+                        </ReactMarkdown>
 
                         {slotImages.length > 0 && (
                             <div className="slot-images-grid">
