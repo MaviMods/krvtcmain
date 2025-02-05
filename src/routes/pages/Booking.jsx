@@ -19,12 +19,12 @@ const Booking = () => {
     const [events, setEvents] = useState([]);
     const [loadingBookings, setLoadingBookings] = useState(false);
     const [loadingEvents, setLoadingEvents] = useState(false);
-    const [slotImages, setSlotImages] = useState([]);
+    const [slotImages, setSlotImages] = useState([]); // State for slot images
 
     // Function to strip HTML tags
     const stripHtmlTags = (html) => {
         if (!html) return '';
-        return html.replace(/<[^>]+>/g, '');
+        return html.replace(/<[^>]+>/g, ''); // Remove all HTML tags
     };
 
     const fetchEvents = async () => {
@@ -52,6 +52,7 @@ const Booking = () => {
             const bookingUrl = `https://bookback.koyeb.app/api/bookings/${encodeURIComponent(formattedEventName)}`;
             try {
                 const response = await axios.get(bookingUrl);
+                // Sort bookings by slotNumber
                 const sortedBookings = response.data.sort((a, b) => {
                     return parseInt(a.slotNumber) - parseInt(b.slotNumber);
                 });
@@ -65,24 +66,24 @@ const Booking = () => {
         }
     };
 
-    const fetchSlotImages = async (eventName) => {
-    try {
-        // Replace spaces with slashes and encode the eventName
-        const formattedEventName = encodeURIComponent(eventName.replace(/\s+/g, '/'));
-        const response = await axios.get(`https://bookback.koyeb.app/slot-images/${eventId}`);
-        if (response.data.success) {
-            setSlotImages(response.data.slotImages);
-        } else {
-            console.error('Failed to fetch slot images:', response.data.message);
+    // Fetch slot images for the selected event
+    const fetchSlotImages = async (eventId) => {
+        try {
+            const response = await axios.get(`https://bookback.koyeb.app/slot-images/${eventId}`);
+            if (response.data.success) {
+                setSlotImages(response.data.slotImages);
+            } else {
+                console.error('Failed to fetch slot images:', response.data.message);
+            }
+        } catch (error) {
+            console.error('Error fetching slot images:', error);
         }
-    } catch (error) {
-        console.error('Error fetching slot images:', error);
-    }
-};
+    };
 
     const handleBooking = async (e) => {
         e.preventDefault();
 
+        // Validate slot numbers
         if (isNaN(slotNumber) || (extraSlot === 'Yes' && isNaN(extraSlotNumber))) {
             alert('Slot numbers must be numeric.');
             return;
@@ -109,6 +110,7 @@ const Booking = () => {
                 const response = await axios.post(`https://bookback.koyeb.app/api/bookings/${encodeURIComponent(formattedEventName)}`, bookingDetails);
                 console.log('Booking successful:', response.data);
                 alert('Booking request sent for approval.');
+                // Clear the form fields after successful booking
                 setDriver('');
                 setCompany('');
                 setusername('');
@@ -116,7 +118,7 @@ const Booking = () => {
                 setSlotNumber('');
                 setExtraSlot('No');
                 setExtraSlotNumber('');
-                fetchBookings();
+                fetchBookings(); // Fetch bookings after a successful booking
             } catch (error) {
                 console.error('Error booking slot:', error.response?.data || error.message);
                 alert('Failed to book slot. Please try again.');
@@ -128,9 +130,7 @@ const Booking = () => {
         const event = events.find(event => event.id === parseInt(id));
         setEventId(id);
         setSelectedEvent(event || null);
-        if (event) {
-            fetchSlotImages(event.name);
-        }
+        fetchSlotImages(id); // Fetch slot images for the selected event
     };
 
     useEffect(() => {
@@ -163,6 +163,7 @@ const Booking = () => {
                             )}
                         </ReactMarkdown>
 
+                        {/* Display Multiple Slot Images in a Grid */}
                         {slotImages.length > 0 && (
                             <div className="slot-images-grid">
                                 {slotImages.map((image, index) => (
