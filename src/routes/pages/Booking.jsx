@@ -69,7 +69,7 @@ const Booking = () => {
     try {
         // Replace spaces with slashes and encode the eventName
         const formattedEventName = encodeURIComponent(eventName.replace(/\s+/g, '/'));
-        const response = await axios.get(`https://bookback.koyeb.app/slot-images/${formattedEventName}`);
+        const response = await axios.get(`https://bookback.koyeb.app/slot-images/${eventId}`);
         if (response.data.success) {
             setSlotImages(response.data.slotImages);
         } else {
