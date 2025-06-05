@@ -27,7 +27,7 @@ const Booking = () => {
     };
 
     const eventSlotImages = {
-        26658: ['https://i.postimg.cc/VvzfXR4H/slot-1-2.png', 'https://i.postimg.cc/wTTxvw11/slot-3-4.png', 'https://i.postimg.cc/Bnjq5tcs/slot-5-6.png', 'https://i.postimg.cc/qRT4dwfM/slot-7-12.png', 'https://i.postimg.cc/4y4GY3ND/slot-1314.png', 'https://i.postimg.cc/fW5Z6Y8D/slot-15-16.png', 'https://i.postimg.cc/fyb4wg8Z/slot-17-18.png', 'https://i.postimg.cc/wxW8WgBB/slot-19-120.png'],
+        28565: ['https://i.postimg.cc/zDCgZ3y5/Slot.png', 'https://i.postimg.cc/MGLFSdrc/Slot-1.png', 'https://i.postimg.cc/YCGFPRgD/Slot-2.png', 'https://i.postimg.cc/c4XqzMZ3/Slot-3.png', 'https://i.postimg.cc/3Jp143fx/Slot-4.png', 'https://i.postimg.cc/G2xrm007/Slot-5.png', 'https://i.postimg.cc/WbXGJt6j/Slot-6.png', 'https://i.postimg.cc/qRDr3sRy/Slot-7.png', 'https://i.postimg.cc/jSnh0tPb/Slot-8.png', 'https://i.postimg.cc/TY36cHmm/Slot-9.png'],
         2: ['slot2_image_url1.jpg', 'slot2_image_url2.jpg'],
     };
 
