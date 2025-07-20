@@ -185,6 +185,26 @@ tbody tr:hover {
     }
 }
 
+.slide-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 6px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dot.active {
+    background: #f57c00;
+}
+
 @media (max-width: 480px) {
     .slot-images-grid {
         grid-template-columns: 1fr;
