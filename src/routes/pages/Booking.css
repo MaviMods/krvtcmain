@@ -123,6 +123,54 @@ tbody tr:hover {
     transform: scale(1.05);
 }
 
+.slot-slider {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-container {
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+}
+
+.slide-image {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 8px;
+}
+
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.slide-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
 @media (max-width: 768px) {
     .slot-images-grid {
         grid-template-columns: repeat(2, 1fr);
