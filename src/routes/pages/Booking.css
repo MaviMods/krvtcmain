@@ -135,16 +135,21 @@ tbody tr:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #f57c00; /* Orange */
+    background-color: #f57c00;
     color: #fff;
     border: none;
-    padding: 12px;
+    padding: 8px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 50%;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     transition: background 0.3s ease;
     z-index: 10;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slide-btn:hover {
@@ -152,11 +157,11 @@ tbody tr:hover {
 }
 
 .prev-btn {
-    left: -50px; /* Outside left */
+    left: -45px; /* Move outside */
 }
 
 .next-btn {
-    right: -50px; /* Outside right */
+    right: -45px; /* Move outside */
 }
 
 /* Slider Dots */
