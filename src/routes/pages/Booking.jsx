@@ -19,6 +19,7 @@ const Booking = () => {
     const [events, setEvents] = useState([]);
     const [loadingBookings, setLoadingBookings] = useState(false);
     const [loadingEvents, setLoadingEvents] = useState(false);
+    const [currentSlide, setCurrentSlide] = useState(0);
 
     // Function to strip HTML tags
     const stripHtmlTags = (html) => {
@@ -72,6 +73,24 @@ const Booking = () => {
             }
         }
     };
+
+    const nextSlide = () => {
+        if (selectedEvent && eventSlotImages[selectedEvent.id]) {
+            setCurrentSlide((prev) => (prev + 1) % eventSlotImages[selectedEvent.id].length);
+        }
+    };
+
+    const prevSlide = () => {
+        if (selectedEvent && eventSlotImages[selectedEvent.id]) {
+            setCurrentSlide((prev) => 
+                (prev - 1 + eventSlotImages[selectedEvent.id].length) % eventSlotImages[selectedEvent.id].length
+            );
+        }
+    };
+
+    useEffect(() => {
+        setCurrentSlide(0);
+    }, [selectedEvent]);
 
     const handleBooking = async (e) => {
         e.preventDefault();
@@ -157,12 +176,16 @@ const Booking = () => {
 
                         {/* Display Multiple Slot Images in a Grid */}
                         {eventSlotImages[selectedEvent.id] && eventSlotImages[selectedEvent.id].length > 0 && (
-                            <div className="slot-images-grid">
-                                {eventSlotImages[selectedEvent.id].map((image, index) => (
-                                    <a href={image} target="_blank" rel="noopener noreferrer" key={index}>
-                                        <img src={image} alt={`Slot ${index + 1}`} />
-                                    </a>
-                                ))}
+                            <div className="slot-slider">
+                                <button onClick={prevSlide} className="slide-btn prev-btn">‹</button>
+                                <div className="slide-container">
+                                    <img
+                                        src={eventSlotImages[selectedEvent.id][currentSlide]}
+                                        alt={`Slot ${currentSlide + 1}`}
+                                        className="slide-image"
+                                    />
+                                </div>
+                                <button onClick={nextSlide} className="slide-btn next-btn">›</button>
                             </div>
                         )}
                     </div>
