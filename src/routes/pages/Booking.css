@@ -152,13 +152,12 @@ tbody tr:hover {
 }
 
 .prev-btn {
-    left: 10px;
+    left: 10px;   /* Sticks to left */
 }
 
 .next-btn {
-    right: 10px;
+    right: 10px;  /* Sticks to right */
 }
-
 /* Slider Dots */
 .slide-dots {
     display: flex;
