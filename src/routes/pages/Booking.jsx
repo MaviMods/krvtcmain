@@ -174,18 +174,35 @@ const Booking = () => {
                             )}
                         </ReactMarkdown>
 
-                        {/* Display Multiple Slot Images in a Grid */}
+                        {/* Display Slot Images as a Slider */}
                         {eventSlotImages[selectedEvent.id] && eventSlotImages[selectedEvent.id].length > 0 && (
                             <div className="slot-slider">
                                 <button onClick={prevSlide} className="slide-btn prev-btn">‹</button>
                                 <div className="slide-container">
-                                    <img
-                                        src={eventSlotImages[selectedEvent.id][currentSlide]}
-                                        alt={`Slot ${currentSlide + 1}`}
-                                        className="slide-image"
-                                    />
+                                    <a
+                                      href={eventSlotImages[selectedEvent.id][currentSlide]}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                     >
+                                      <img
+                                          src={eventSlotImages[selectedEvent.id][currentSlide]}
+                                          alt={`Slot ${currentSlide + 1}`}
+                                          className="slide-image"
+                                      />
+                                   </a>
                                 </div>
                                 <button onClick={nextSlide} className="slide-btn next-btn">›</button>
+
+                                {/* Dot Indicators */}
+                                <div className="slide-dots">
+                                    {eventSlotImages[selectedEvent.id].map((_, index) => (
+                                        <span
+                                            key={index}
+                                            className={`dot ${index === currentSlide ? 'active' : ''}`}
+                                            onClick={() => setCurrentSlide(index)}
+                                        ></span>
+                                    ))}
+                                </div>
                             </div>
                         )}
                     </div>
