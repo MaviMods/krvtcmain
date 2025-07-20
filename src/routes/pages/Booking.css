@@ -108,59 +108,64 @@ tbody tr:hover {
     max-width: 600px;
     margin: 20px auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 0 50px; /* Extra space for outside buttons */
+    box-sizing: border-box;
 }
 
 .slide-container {
     position: relative;
     width: 100%;
+    max-width: 600px;
     overflow: hidden;
     border-radius: 10px;
-    text-align: center;
 }
 
 .slide-image {
     width: 100%;
     height: auto;
+    object-fit: contain;
     border-radius: 10px;
     transition: opacity 0.5s ease-in-out;
 }
 
-/* --- Slider Buttons Outside --- */
+/* Slider Buttons */
 .slide-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.6);
+    background-color: #f57c00; /* Orange */
     color: #fff;
     border: none;
-    padding: 14px 18px;
+    padding: 12px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 20px;
     border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     transition: background 0.3s ease;
     z-index: 10;
 }
 
 .slide-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background-color: #e65100;
 }
 
 .prev-btn {
-    left: -45px;
+    left: -50px; /* Outside left */
 }
 
 .next-btn {
-    right: -45px;
+    right: -50px; /* Outside right */
 }
 
-/* --- Slider Dots --- */
+/* Slider Dots */
 .slide-dots {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    gap: 6px;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
 .dot {
@@ -176,29 +181,58 @@ tbody tr:hover {
     background: #f57c00;
 }
 
+/* Grid layout fallback (if needed elsewhere) */
+.slot-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.slot-images-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.slot-images-grid img:hover {
+    transform: scale(1.05);
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
-    .prev-btn {
-        left: -30px;
+    .slot-images-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .next-btn {
-        right: -30px;
+    form {
+        gap: 10px;
+    }
+
+    select, input, button {
+        font-size: 14px;
     }
 
     .slide-btn {
-        padding: 10px 14px;
-        font-size: 20px;
+        padding: 8px;
+        font-size: 18px;
+    }
+
+    .prev-btn {
+        left: -35px;
+    }
+
+    .next-btn {
+        right: -35px;
     }
 }
 
 @media (max-width: 480px) {
-    .prev-btn {
-        left: -20px;
-    }
-
-    .next-btn {
-        right: -20px;
+    .slot-images-grid {
+        grid-template-columns: 1fr;
     }
 
     h1, h2 {
@@ -206,7 +240,15 @@ tbody tr:hover {
     }
 
     .slide-btn {
-        padding: 8px 10px;
-        font-size: 18px;
+        padding: 6px;
+        font-size: 16px;
+    }
+
+    .prev-btn {
+        left: -30px;
+    }
+
+    .next-btn {
+        right: -30px;
     }
 }
