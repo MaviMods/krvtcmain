@@ -23,7 +23,7 @@ const Booking = () => {
     // Function to strip HTML tags
     const stripHtmlTags = (html) => {
         if (!html) return '';
-        return html.replace(/<[^>]+>/g, ''); // Remove all HTML tags
+        return html.replace(/<[^>]+>/g, ''); // Remove all HTML tag
     };
 
     const eventSlotImages = {
