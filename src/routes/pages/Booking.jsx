@@ -21,10 +21,9 @@ const Booking = () => {
     const [loadingEvents, setLoadingEvents] = useState(false);
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    // Function to strip HTML tags
     const stripHtmlTags = (html) => {
         if (!html) return '';
-        return html.replace(/<[^>]+>/g, ''); // Remove all HTML tag
+        return html.replace(/<[^>]+>/g, '');
     };
 
     const eventSlotImages = {
@@ -42,12 +41,10 @@ const Booking = () => {
             if (response.data && !response.data.error) {
                 setEvents(response.data.upcoming_events);
             } else {
-                console.error('Error fetching events:', response.data.message);
                 alert('Failed to fetch events. Please try again later.');
             }
         } catch (error) {
-            console.error('Error fetching events:', error);
-            alert('An error occurred while fetching events. Please check your connection.');
+            alert('An error occurred while fetching events.');
         } finally {
             setLoadingEvents(false);
         }
@@ -60,14 +57,10 @@ const Booking = () => {
             const bookingUrl = `https://bookback.koyeb.app/api/bookings/${encodeURIComponent(formattedEventName)}`;
             try {
                 const response = await axios.get(bookingUrl);
-                // Sort bookings by slotNumber
-                const sortedBookings = response.data.sort((a, b) => {
-                    return parseInt(a.slotNumber) - parseInt(b.slotNumber);
-                });
+                const sortedBookings = response.data.sort((a, b) => parseInt(a.slotNumber) - parseInt(b.slotNumber));
                 setBookings(sortedBookings);
             } catch (error) {
-                console.error('Error fetching bookings:', error);
-                alert('Failed to fetch bookings. Please try again later.');
+                alert('Failed to fetch bookings.');
             } finally {
                 setLoadingBookings(false);
             }
@@ -82,7 +75,7 @@ const Booking = () => {
 
     const prevSlide = () => {
         if (selectedEvent && eventSlotImages[selectedEvent.id]) {
-            setCurrentSlide((prev) => 
+            setCurrentSlide((prev) =>
                 (prev - 1 + eventSlotImages[selectedEvent.id].length) % eventSlotImages[selectedEvent.id].length
             );
         }
@@ -92,17 +85,24 @@ const Booking = () => {
         setCurrentSlide(0);
     }, [selectedEvent]);
 
+    useEffect(() => {
+        fetchEvents();
+    }, []);
+
+    useEffect(() => {
+        fetchBookings();
+    }, [selectedEvent]);
+
     const handleBooking = async (e) => {
         e.preventDefault();
 
-        // Validate slot numbers
         if (isNaN(slotNumber) || (extraSlot === 'Yes' && isNaN(extraSlotNumber))) {
             alert('Slot numbers must be numeric.');
             return;
         }
 
         if (extraSlot === 'Yes' && !extraSlotNumber) {
-            alert('Extra Slot Number is required when selecting an extra slot.');
+            alert('Extra Slot Number is required.');
             return;
         }
 
@@ -119,10 +119,8 @@ const Booking = () => {
 
             const formattedEventName = selectedEvent.name.replace(/\s+/g, '/');
             try {
-                const response = await axios.post(`https://bookback.koyeb.app/api/bookings/${encodeURIComponent(formattedEventName)}`, bookingDetails);
-                console.log('Booking successful:', response.data);
+                await axios.post(`https://bookback.koyeb.app/api/bookings/${encodeURIComponent(formattedEventName)}`, bookingDetails);
                 alert('Booking request sent for approval.');
-                // Clear the form fields after successful booking
                 setDriver('');
                 setCompany('');
                 setusername('');
@@ -130,10 +128,9 @@ const Booking = () => {
                 setSlotNumber('');
                 setExtraSlot('No');
                 setExtraSlotNumber('');
-                fetchBookings(); // Fetch bookings after a successful booking
-            } catch (error) {
-                console.error('Error booking slot:', error.response?.data || error.message);
-                alert('Failed to book slot. Please try again.');
+                fetchBookings();
+            } catch {
+                alert('Failed to book slot.');
             }
         }
     };
@@ -143,14 +140,6 @@ const Booking = () => {
         setEventId(id);
         setSelectedEvent(event || null);
     };
-
-    useEffect(() => {
-        fetchEvents();
-    }, []);
-
-    useEffect(() => {
-        fetchBookings();
-    }, [selectedEvent]);
 
     return (
         <div className={`container ${themeTatailwind}`}>
@@ -169,31 +158,29 @@ const Booking = () => {
                     <div className="event-description">
                         <ReactMarkdown>
                             {selectedEvent.description.replace(
-                                /<p[^>]*>([\s\S]*?)<\/p>/g, // Match <p> tags
-                                (match, p1) => stripHtmlTags(p1) // Remove HTML tags from the event name
+                                /<p[^>]*>([\s\S]*?)<\/p>/g,
+                                (match, p1) => stripHtmlTags(p1)
                             )}
                         </ReactMarkdown>
 
-                        {/* Display Slot Images as a Slider */}
-                        {eventSlotImages[selectedEvent.id] && eventSlotImages[selectedEvent.id].length > 0 && (
+                        {eventSlotImages[selectedEvent.id]?.length > 0 && (
                             <div className="slot-slider">
-                                <button onClick={prevSlide} className="slide-btn prev-btn">‹</button>
-                                <div className="slide-container">
-                                    <a
-                                      href={eventSlotImages[selectedEvent.id][currentSlide]}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                     >
-                                      <img
-                                          src={eventSlotImages[selectedEvent.id][currentSlide]}
-                                          alt={`Slot ${currentSlide + 1}`}
-                                          className="slide-image"
-                                      />
-                                   </a>
-                                </div>
-                                <button onClick={nextSlide} className="slide-btn next-btn">›</button>
+                                {/* Prev Button - Outside Left */}
+                                <button type="button" onClick={prevSlide} className="slide-btn prev-btn">‹</button>
 
-                                {/* Dot Indicators */}
+                                <div className="slide-container">
+                                    <a href={eventSlotImages[selectedEvent.id][currentSlide]} target="_blank" rel="noopener noreferrer">
+                                        <img
+                                            src={eventSlotImages[selectedEvent.id][currentSlide]}
+                                            alt={`Slot ${currentSlide + 1}`}
+                                            className="slide-image"
+                                        />
+                                    </a>
+                                </div>
+
+                                {/* Next Button - Outside Right */}
+                                <button type="button" onClick={nextSlide} className="slide-btn next-btn">›</button>
+
                                 <div className="slide-dots">
                                     {eventSlotImages[selectedEvent.id].map((_, index) => (
                                         <span
