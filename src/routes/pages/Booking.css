@@ -157,11 +157,11 @@ tbody tr:hover {
 }
 
 .prev-btn {
-    left: -45px; /* Move outside */
+    left: -50px; /* Move outside */
 }
 
 .next-btn {
-    right: -45px; /* Move outside */
+    right: -50px; /* Move outside */
 }
 
 /* Slider Dots */
