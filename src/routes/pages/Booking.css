@@ -102,49 +102,36 @@ tbody tr:hover {
     transition: background-color 0.3s ease;
 }
 
-.slot-images-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.slot-images-grid img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 0;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.slot-images-grid img:hover {
-    transform: scale(1.05);
-}
-
+/* --- Slot Image Slider --- */
 .slot-slider {
     position: relative;
     max-width: 600px;
     margin: 20px auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .slide-container {
-    overflow: hidden;
+    position: relative;
     width: 100%;
-    text-align: center;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slide-image {
     width: 100%;
     height: auto;
+    object-fit: contain;
+    border-radius: 10px;
     transition: opacity 0.5s ease-in-out;
-    border-radius: 8px;
 }
 
+/* Slider Buttons */
 .slide-btn {
     position: absolute;
     top: 50%;
@@ -152,11 +139,12 @@ tbody tr:hover {
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
-    padding: 8px 12px;
+    padding: 10px 14px;
     cursor: pointer;
     font-size: 24px;
     border-radius: 50%;
     transition: background 0.3s ease;
+    z-index: 10;
 }
 
 .slide-btn:hover {
@@ -171,25 +159,13 @@ tbody tr:hover {
     right: 10px;
 }
 
-@media (max-width: 768px) {
-    .slot-images-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    form {
-        gap: 10px;
-    }
-
-    select, input, button {
-        font-size: 14px;
-    }
-}
-
+/* Slider Dots */
 .slide-dots {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    gap: 6px;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
 .dot {
@@ -205,6 +181,47 @@ tbody tr:hover {
     background: #f57c00;
 }
 
+/* Grid layout fallback (if needed elsewhere) */
+.slot-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.slot-images-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.slot-images-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .slot-images-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    select, input, button {
+        font-size: 14px;
+    }
+
+    .slide-btn {
+        padding: 6px 10px;
+        font-size: 20px;
+    }
+}
+
 @media (max-width: 480px) {
     .slot-images-grid {
         grid-template-columns: 1fr;
@@ -212,5 +229,10 @@ tbody tr:hover {
 
     h1, h2 {
         font-size: 24px;
+    }
+
+    .slide-btn {
+        padding: 5px 9px;
+        font-size: 18px;
     }
 }
