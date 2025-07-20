@@ -118,9 +118,6 @@ tbody tr:hover {
     max-width: 600px;
     overflow: hidden;
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .slide-image {
@@ -134,14 +131,15 @@ tbody tr:hover {
 /* Slider Buttons */
 .slide-btn {
     position: absolute;
+    display: block;
     top: 50%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
-    padding: 10px 14px;
+    padding: 10px 16px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 22px;
     border-radius: 50%;
     transition: background 0.3s ease;
     z-index: 10;
@@ -152,12 +150,13 @@ tbody tr:hover {
 }
 
 .prev-btn {
-    left: 10px;   /* Sticks to left */
+    left: 10px;  /* Stick to left */
 }
 
 .next-btn {
-    right: 10px;  /* Sticks to right */
+    right: 10px; /* Stick to right */
 }
+
 /* Slider Dots */
 .slide-dots {
     display: flex;
