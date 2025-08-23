@@ -9,7 +9,7 @@
 ```
 VITE_TITLE=site_title
 VITE_REST_API_URL=https://api.url.com
-VITE_CAPTCHA_KEY=recaptcha_v2_site_key
+VITE_CAPTCHA_KEY=recaptcha_v2_site_ke
 ```
 
 ##### Additional settings _(required)_
