@@ -1,4 +1,4 @@
-#### Client application creat in RECT frTruckersMP 
+#### Client application creat in RECT frTruckersMP
 
 ##### The backend of the app can be found here [losandes-express-site](https://github.com/CoffeSiberian/losandes-express-site "losandes-express-site")
 
