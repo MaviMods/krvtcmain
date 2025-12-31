@@ -197,7 +197,7 @@ const Booking = () => {
                     </div>
                 )}
 
-                <input type="text" placeholder="Company Name" value={company} onChange={(e) => setCompany(e.target.value)} required />
+                <input type="text" placeholder="VTC Name" value={company} onChange={(e) => setCompany(e.target.value)} required />
                 <input type="text" placeholder="Slot Number" value={slotNumber} onChange={(e) => setSlotNumber(e.target.value)} required />
                 <input type="text" placeholder="Discord tag eg:mavi.mods" value={username} onChange={(e) => setusername(e.target.value)} required />
                 <input type="text" placeholder="VTC TMP Link" value={truckLink} onChange={(e) => setTruckLink(e.target.value)} required />
