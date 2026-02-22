@@ -35,7 +35,7 @@ const Booking = () => {
         32757: ['https://i.postimg.cc/VN6Q7xNh/krvtc.jpg', 'https://i.postimg.cc/X7V2cwqC/1-2.jpg', 'https://i.postimg.cc/7hXnQWhG/3-4-5-6-7.jpg', 'https://i.postimg.cc/Mpgb4R6N/8.jpg', 'https://i.postimg.cc/fRSYxLct/9-10-11-12.jpg', 'https://i.postimg.cc/KvRT2zH8/13-14-15.jpg', 'https://i.postimg.cc/Nj8jqvBt/16.jpg', 'https://i.postimg.cc/T2ZbTGMY/17-18.jpg', 'https://i.postimg.cc/FRYfQCT6/19.jpg', 'https://i.postimg.cc/fR5kSQFB/20-21.jpg', 'https://i.postimg.cc/gcRJqZQ6/22-23-24-25.jpg', 'https://i.postimg.cc/zf6zTzkR/26-27.jpg', 'https://i.postimg.cc/tCpX3mhH/28.jpg', 'https://i.postimg.cc/V6X8Mj6G/29-30.jpg', 'https://i.postimg.cc/HsYgc8gH/31.jpg'],
         32623: ['https://i.postimg.cc/CKVh5McC/1.png'],
         33298: ['https://i.postimg.cc/CKVh5McC/1.png'],
-        33912: ['https://i.postimg.cc/k5SygqrN/1-2-3-4.jpg', 'https://i.postimg.cc/Fsqcd8Vw/5-6.jpg'],
+        33912: ['https://i.postimg.cc/k5SygqrN/1-2-3-4.jpg', 'https://i.postimg.cc/Fsqcd8Vw/5-6.jpg', 'https://i.postimg.cc/qqnd80B8/7.jpg', 'https://i.postimg.cc/fThG6GT2/8.jpg', 'https://i.postimg.cc/brf5fn8Y/9-10-11.jpg', 'https://i.postimg.cc/pTHQ2JhN/12-13-14-15.jpg', 'https://i.postimg.cc/N0hm4kxj/16-17.jpg', 'https://i.postimg.cc/15fF1jCG/18-19-20-21-22-23-24-25.jpg', 'https://i.postimg.cc/prymxmB7/26-27.jpg', 'https://i.postimg.cc/vmB7DZXf/28.jpg', 'https://i.postimg.cc/gjqLNCNK/29.jpg', 'https://i.postimg.cc/7YtZwPGq/30-31.jpg', 'https://i.postimg.cc/4xhsG6TR/32-33.jpg', 'https://i.postimg.cc/3JzQtk0k/34-35.jpg'],
         2: ['slot2_image_url1.jpg', 'slot2_image_url2.jpg'],
     };
 
