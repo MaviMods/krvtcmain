@@ -42,11 +42,16 @@ const Booking = () => {
     const fetchEvents = async () => {
         setLoadingEvents(true);
         try {
-            const response = await axios.get('https://mavimods.serv00.net/backtest.php');
-            if (response.data && !response.data.error) {
-                setEvents(response.data.upcoming_events);
+            const response = await axios.get(
+  'https://mavimods.serv00.net/backtest.php'
+            );
+
+            console.log(response.data);
+
+            if (response.data?.upcoming_events) {
+               setEvents(response.data.upcoming_events);
             } else {
-                alert('Failed to fetch events. Please try again later.');
+               alert("Invalid API response");
             }
         } catch (error) {
             alert('An error occurred while fetching events.');
