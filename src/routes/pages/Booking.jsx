@@ -40,8 +40,7 @@ const Booking = () => {
     const fetchEvents = async () => {
         setLoadingEvents(true);
         try {
-            const response = await axios.get(
-  'https://mavimods.serv00.net/backtest'
+            const response = await axios.get('/api/events')
             );
 
             console.log(response.data);
