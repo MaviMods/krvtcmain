@@ -27,8 +27,6 @@ const Booking = () => {
     };
 
     const eventSlotImages = {
-        29732: ['https://i.postimg.cc/ry08kGgp/image.png', 'https://i.postimg.cc/1t0rnVrV/image.png', 'https://i.postimg.cc/mD4Qs2WL/image.png', 'https://i.postimg.cc/prXzmGd3/image.png', 'https://i.postimg.cc/SKfnc6H4/image.png', 'https://i.postimg.cc/HLFTcVkm/image.png', 'https://i.postimg.cc/6qtJnRsk/image.png', 'https://i.ibb.co/hRFd6DDy/Slot.png', 'https://i.ibb.co/DHGhpfDh/17-18.png', 'https://i.ibb.co/20ZRBTH5/19.png', 'https://i.ibb.co/qY7Zw1fb/20.png', 'https://i.ibb.co/CpdqJZkT/21-22.png', 'https://i.ibb.co/4w0h8Zh3/23-24-25.png', 'https://i.ibb.co/2YMV06MW/26.png', 'https://i.ibb.co/5XJH2qYF/27-31.png'],
-        30217: ['https://i.postimg.cc/0Q9BDfLf/1.png', 'https://i.postimg.cc/52v7rTJg/2-3-4.png', 'https://i.postimg.cc/mkJjXN6K/5-6-7.png', 'https://i.postimg.cc/JnhQRdf9/8.png', 'https://i.postimg.cc/mkv3NZPs/9-10.png', 'https://i.postimg.cc/1z8pTNDQ/11-12.png', 'https://i.postimg.cc/zG7j4gvt/13-14.png', 'https://i.postimg.cc/QtTt1L5z/15-16.png', 'https://i.postimg.cc/XJFwvx30/17-18-19.png', 'https://i.postimg.cc/KvQt41X4/20-25.png', 'https://i.postimg.cc/bNYtXqGP/26-30.png', 'https://i.postimg.cc/qMYMmryj/31.png', 'https://i.postimg.cc/JnPRjCR3/32.png'],
         30726: ['https://i.ibb.co/5gJDBfCB/1-2-3-4.png', 'https://i.ibb.co/0ygKr1Wc/5-6.png', 'https://i.ibb.co/DgsBP0sB/7-8.jpg', 'https://i.ibb.co/pjFptSK5/9-10.jpg', 'https://i.ibb.co/HDcDkhM6/11-12-13.png', 'https://i.ibb.co/xtrk6z3r/14.png', 'https://i.ibb.co/27LfS6bc/15.png', 'https://i.ibb.co/MyZ1qNPW/16-17.png', 'https://i.ibb.co/Z6VvPsF1/18-20.png', 'https://i.ibb.co/MxzFnCvx/21.png', 'https://i.ibb.co/XxHhDsWz/22-24.png', 'https://i.ibb.co/mC04m30k/25-26.png', 'https://i.ibb.co/Z6vQnD7f/27-28.png', 'https://i.ibb.co/8n4cSj3t/29-31.png'],
         31575: ['https://i.ibb.co/67p3hLCt/1-2-3-4.png', 'https://i.ibb.co/KjYfJ5pD/5-6.png', 'https://i.ibb.co/8LzMfTjJ/7-8.png', 'https://i.ibb.co/5g90jvGC/9-10.png', 'https://i.ibb.co/WNLRcKMb/11-12-13.png', 'https://i.ibb.co/0RhXYpFg/14.png', 'https://i.ibb.co/ZbjtMts/15.png', 'https://i.ibb.co/DD626vQm/16-17.png', 'https://i.ibb.co/pvZfBZvt/18-20.png', 'https://i.ibb.co/7xVjDP59/21.png', 'https://i.ibb.co/CKMdqThP/22-23-24.png', 'https://i.ibb.co/1NRvKWZ/25-26.png', 'https://i.ibb.co/35bBHz6p/27-28.png', 'https://i.ibb.co/twr7MCH1/29-31.png'],  
         31574: ['https://i.postimg.cc/3JB18nMb/1-2.jpg', 'https://i.postimg.cc/Pq3rdGy3/3-4-5-6-7.jpg', 'https://i.postimg.cc/J7Jm2Bw7/8.jpg', 'https://i.postimg.cc/44vqcvkb/9-10-11-12.jpg', 'https://i.postimg.cc/3JJSDPFP/13-14-15.jpg', 'https://i.postimg.cc/0Ng0Z37b/16.jpg', 'https://i.postimg.cc/HsV0mH2x/17-18.jpg', 'https://i.postimg.cc/0QyMCdXb/19.jpg', 'https://i.postimg.cc/T3QW54QF/20-21.jpg', 'https://i.postimg.cc/KYR4kv1g/22-23-24-25.jpg', 'https://i.postimg.cc/66L6QGMD/26-27.jpg', 'https://i.postimg.cc/L54c5hsj/28.jpg', 'https://i.postimg.cc/KYys44q7/29-30.jpg', 'https://i.postimg.cc/q7LQRw65/31.jpg'],
@@ -43,7 +41,7 @@ const Booking = () => {
         setLoadingEvents(true);
         try {
             const response = await axios.get(
-  'https://mavimods.serv00.net/backtest.php'
+  'https://mavimods.serv00.net/backtest'
             );
 
             console.log(response.data);
