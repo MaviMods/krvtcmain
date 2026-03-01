@@ -40,8 +40,7 @@ const Booking = () => {
     const fetchEvents = async () => {
         setLoadingEvents(true);
         try {
-            const response = await axios.get('/api/events')
-            );
+            const response = await axios.get('/api/events');
 
             console.log(response.data);
 
